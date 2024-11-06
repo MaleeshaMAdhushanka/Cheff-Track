@@ -1,0 +1,100 @@
+@import '../fonts/Fonts.css';
+
+
+
+
+.label-dashboard{
+    -fx-font-family: 'Open Sans Bold';
+}
+
+
+
+.pane-admin-details{
+    -fx-font-family: 'Open Sans';
+    -fx-font-size: 18px;
+    -fx-background-color: #FFFFFFFF;
+    -fx-background-radius: 15 0 0 15;
+}
+
+
+.mfx-button-add{
+    -fx-font-size: 14px;
+    -fx-font-family: 'Roboto Medium';
+    -fx-background-color: #0984e3;
+    -fx-text-fill: #ffffff;
+}
+
+.mfx-button-remove{
+    -fx-font-size: 14px;
+    -fx-font-family: 'Roboto Bold';
+    -fx-background-color: #f5194d;
+    -fx-text-fill: #ffffff;
+}
+
+.mfx-button-update{
+    -fx-font-size: 14px;
+    -fx-font-family: 'Roboto Bold';
+    -fx-background-color: #64f526;
+    -fx-text-fill: #ffffff;
+}
+
+.mfx-combo-box{
+    -mfx-main: #0984e3;
+    -fx-font-size: 14;
+    -fx-font-family: 'Visby Round CF Medium';
+}
+
+.mfx-dp-picker{
+    -mfx-main: #0984e3;
+    -fx-font-size: 14;
+    -fx-font-family: 'Visby Round CF Medium';
+}
+
+.mfx-dp-picker-error{
+    -mfx-main: #ff3e56;
+    -fx-font-size: 14;
+    -fx-font-family: 'Visby Round CF Medium';
+}
+
+
+.mfx-combo-box-error{
+    -mfx-main:  #f5194d;
+    -fx-font-size: 14;
+    -fx-font-family: 'Visby Round CF Medium';
+}
+
+
+.mfx-checkbox{
+    -mfx-main: #0984e3;
+}
+
+.pane-settings{
+    -fx-background-color: #FFFFFFFF;
+    -fx-background-radius: 15 15 15 15;
+}
+
+.mfx-text-field-details{
+    -mfx-main: #0984e3;
+    -fx-font-size: 14;
+    -fx-font-family: 'Visby Round CF Medium';
+}
+
+.mfx-text-field-details-error{
+    -mfx-main: #ff3e56;
+    -fx-font-size: 14;
+    -fx-font-family: 'Visby Round CF Medium';
+}
+
+.mfx-button-update-settings{
+    -fx-font-size: 14px;
+    -fx-font-family: 'Roboto Medium';
+    -fx-background-color: #0984e3;
+    -fx-text-fill: #ffffff;
+}
+
+.mfx-button-remove-settings{
+    -fx-font-size: 14px;
+    -fx-font-family: 'Roboto Medium';
+    -fx-background-color:  #2d3436;
+    -fx-text-fill: #ffffff;
+}

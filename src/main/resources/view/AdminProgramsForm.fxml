@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="680.0" prefWidth="804.0" stylesheets="@../../../../../../Downloads/book-worm-main/src/main/resources/assets/css/PageStyles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.culinary.controller.AdminProgramsFormController">
+   <children>
+      <Label layoutX="27.0" layoutY="52.0" prefHeight="42.0" prefWidth="146.0" styleClass="label-dashboard" stylesheets="@../../../../../../Downloads/book-worm-main/src/main/resources/assets/css/PageStyles.css" text="Programs">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <MFXButton layoutX="667.0" layoutY="130.0" onAction="#btnAddOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-add" stylesheets="@../../../../../../Downloads/book-worm-main/src/main/resources/assets/css/PageStyles.css" text="Add">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Downloads/book-worm-main/src/main/resources/assets/images/add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </MFXButton>
+      <TableView fx:id="tblBook" focusTraversable="false" layoutX="27.0" layoutY="197.0" prefHeight="433.0" prefWidth="749.0" stylesheets="@../../../../../../Downloads/book-worm-main/src/main/resources/assets/css/TableStyle.css">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="68.0" style="-fx-alignment: center;" text="ID" />
+            <TableColumn fx:id="colProgramName" prefWidth="163.0" style="-fx-alignment: center;" text="Program Name" />
+            <TableColumn fx:id="colDuration" prefWidth="124.0" style="-fx-alignment: center;" text="Duration" />
+            <TableColumn fx:id="colFee" prefWidth="131.0" style="-fx-alignment: center;" text="Fee" />
+            <TableColumn fx:id="colType" prefWidth="85.0" style="-fx-alignment: center;" text="Type" />
+            <TableColumn fx:id="colUpdate" prefWidth="96.0" style="-fx-alignment: center;" text="Update" />
+            <TableColumn fx:id="colRemove" style="-fx-alignment: center;" text="Remove" />
+         </columns>
+      </TableView>
+      <MFXTextField fx:id="txtSearch" floatMode="DISABLED" floatingText="Search" layoutX="27.0" layoutY="130.0" prefHeight="45.0" prefWidth="175.0" promptText="Search" styleClass="mfx-text-field-details" />
+      <MFXButton layoutX="238.0" layoutY="133.0" onAction="#btnSearchOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-add" stylesheets="@../../../../../../Downloads/book-worm-main/src/main/resources/assets/css/PageStyles.css" text="Search">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Downloads/book-worm-main/src/main/resources/assets/images/search.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </MFXButton>
+   </children>
+</AnchorPane>

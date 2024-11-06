@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="registerPane" prefHeight="630.0" prefWidth="482.0" styleClass="pane" stylesheets="@../../../../../../Downloads/book-worm-main/src/main/resources/assets/css/LoginPageStyles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.culinary.controller.AdminRegisterFormController">
+   <children>
+      <Label layoutX="107.0" layoutY="94.0" styleClass="label-welcome" text="Admin Register">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="109.0" layoutY="151.0" styleClass="label-loginWithUsername" text="Login with Username">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <MFXTextField fx:id="txtUsername" floatMode="BORDER" floatingText="Username" layoutX="109.0" layoutY="194.0" prefHeight="55.0" prefWidth="270.0" styleClass="mfx-text-field" />
+      <MFXPasswordField fx:id="txtPassword" floatMode="BORDER" floatingText="Password" layoutX="109.0" layoutY="274.0" prefHeight="55.0" prefWidth="270.0" styleClass="mfx-text-field" />
+      <MFXButton layoutX="195.0" layoutY="439.0" onAction="#btnRegister" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-login" text="Register" />
+      <Line endX="125.0" layoutX="114.0" layoutY="513.0" startX="44.0" strokeWidth="0.4" />
+      <Line endX="125.0" layoutX="219.0" layoutY="513.0" startX="44.0" strokeWidth="0.4" />
+      <Label layoutX="240.0" layoutY="503.0" styleClass="label-or" text="OR">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="157.0" layoutY="533.0" styleClass="label-dontHaveAccount" text="Already have account?">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="308.0" layoutY="533.0" onMouseClicked="#btnLogin" styleClass="label-register" text="Login">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <MFXPasswordField fx:id="txtConfirmPassword" floatMode="BORDER" floatingText="Confirm Password" layoutX="109.0" layoutY="352.0" prefHeight="55.0" prefWidth="270.0" styleClass="mfx-text-field" />
+      <Label layoutX="310.0" layoutY="22.0" prefHeight="30.0" prefWidth="82.0" styleClass="label-hostel" text="Cheff">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="388.0" layoutY="22.0" styleClass="label-d24" text="Track">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblError" layoutX="109.0" layoutY="415.0" styleClass="label-error" text="Password doesnt match." visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

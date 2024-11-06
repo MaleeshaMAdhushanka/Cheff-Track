@@ -1,0 +1,242 @@
+@import '../fonts/Fonts.css';
+
+
+
+/*Admin Dashboard*/
+.pane{
+    -fx-background-color: #FFFFFFFF;
+}
+
+
+.label-hostel{
+    -fx-font-family: 'Roboto Bold';
+    -fx-text-fill: #0984e3;
+}
+
+
+.label-d24{
+    -fx-font-family: 'Roboto Bold';
+}
+
+
+.pane-admin-details{
+    -fx-font-family: 'Open Sans';
+    -fx-font-size: 18px;
+    -fx-background-color: #FFFFFFFF;
+    -fx-background-radius: 15 0 0 15;
+}
+
+.pane-dashboard-cards{
+    -fx-background-color: #FFFFFFFF;
+    -fx-background-radius: 15 15 15 15;
+
+}
+.pane-dashboard-card-gradiant{
+    -fx-background-radius: 15 15 15 15;
+    -fx-background-color:  linear-gradient(to right top, #0984E3, #86A8E7,#5FFBF1);
+    -fx-text-fill:  #FFFFFF;
+}
+
+.lbl-dashboard-card-title{
+    -fx-text-fill: #3d3d3d;
+}
+.lbl-dashboard-card-title-gradiant{
+    -fx-font-family: 'Open Sans SemiBold';
+    -fx-text-fill: #f6f6f6;
+}
+
+
+
+.mfx-button-Dashboard {
+    -fx-font-family: 'Roboto Bold';
+    -fx-font-size: 16;
+    -fx-text-fill:  #485460;
+    -fx-background-color:  #FFFFFF;
+    -fx-background-radius: 0 25 25 0;
+}
+
+.mfx-button-Dashboard:hover {
+    -fx-background-color:  linear-gradient(to right top, #0984E3, #86A8E7,#5FFBF1);
+    -fx-text-fill:  #FFFFFF;
+    -fx-graphic: url('../images/dashboard-white.png');
+}
+
+.mfx-button-Dashboard-active{
+    -fx-background-color:  linear-gradient(to right top, #0984E3, #86A8E7,#5FFBF1);
+    -fx-text-fill:  #FFFFFF;
+    -fx-graphic: url('../images/dashboard-white.png');
+}
+
+.mfx-button-BorrowBooks{
+    -fx-font-family: 'Roboto Bold';
+    -fx-font-size: 16;
+    -fx-text-fill:  #485460;
+    -fx-background-color:  #FFFFFF;
+    -fx-background-radius: 0 25 25 0;
+}
+
+
+.mfx-button-BorrowBooks:hover {
+    -fx-background-color:  linear-gradient(to right top, #0984E3, #86A8E7,#5FFBF1);
+    -fx-text-fill:  #FFFFFF;
+    -fx-graphic: url('../images/borrowBooks-white.png');
+}
+
+.mfx-button-BorrowBooks-active{
+    -fx-background-color:  linear-gradient(to right top, #0984E3, #86A8E7,#5FFBF1);
+    -fx-text-fill:  #FFFFFF;
+    -fx-graphic: url('../images/borrowBooks-white.png');
+
+}
+
+
+.mfx-button-Book{
+    -fx-font-family: 'Roboto Bold';
+    -fx-font-size: 16;
+    -fx-text-fill:  #485460;
+    -fx-background-color:  #FFFFFF;
+    -fx-background-radius: 0 25 25 0;
+}
+
+.mfx-button-Book:hover {
+    -fx-background-color:  linear-gradient(to right top, #0984E3, #86A8E7,#5FFBF1);
+    -fx-text-fill:  #FFFFFF;
+    -fx-graphic: url('../images/book-white.png');
+}
+
+.mfx-button-Book-active{
+    -fx-background-color:  linear-gradient(to right top, #0984E3, #86A8E7,#5FFBF1);
+    -fx-text-fill:  #FFFFFF;
+    -fx-graphic: url('../images/book-white.png');
+}
+
+
+.mfx-button-User{
+    -fx-font-family: 'Roboto Bold';
+    -fx-font-size: 16;
+    -fx-text-fill:  #485460;
+    -fx-background-color:  #FFFFFF;
+    -fx-background-radius: 0 25 25 0;
+}
+
+.mfx-button-User:hover {
+    -fx-background-color:  linear-gradient(to right top, #0984E3, #86A8E7,#5FFBF1);
+    -fx-text-fill:  #FFFFFF;
+    -fx-graphic: url('../images/user-white.png');
+}
+
+.mfx-button-User-active{
+    -fx-background-color:  linear-gradient(to right top, #0984E3, #86A8E7,#5FFBF1);
+    -fx-text-fill:  #FFFFFF;
+    -fx-graphic: url('../images/user-white.png');
+}
+
+
+.mfx-button-Branch{
+    -fx-font-family: 'Roboto Bold';
+    -fx-font-size: 16;
+    -fx-text-fill:  #485460;
+    -fx-background-color:  #FFFFFF;
+    -fx-background-radius: 0 25 25 0;
+}
+
+.mfx-button-Branch:hover {
+    -fx-background-color:  linear-gradient(to right top, #0984E3, #86A8E7,#5FFBF1);
+    -fx-text-fill:  #FFFFFF;
+    -fx-graphic: url('../images/branch-white.png');
+}
+
+.mfx-button-Branch-active{
+    -fx-background-color:  linear-gradient(to right top, #0984E3, #86A8E7,#5FFBF1);
+    -fx-text-fill:  #FFFFFF;
+    -fx-graphic: url('../images/branch-white.png');
+}
+
+.mfx-button-Settings{
+    -fx-font-family: 'Roboto Bold';
+    -fx-font-size: 16;
+    -fx-text-fill:  #485460;
+    -fx-background-color:  #FFFFFF;
+    -fx-background-radius: 0 25 25 0;
+}
+
+
+.mfx-button-Settings:hover {
+    -fx-background-color:  linear-gradient(to right top, #0984E3, #86A8E7,#5FFBF1);
+    -fx-text-fill:  #FFFFFF;
+    -fx-graphic: url('../images/setting-white.png');
+}
+
+.mfx-button-Settings-active{
+    -fx-background-color:  linear-gradient(to right top, #0984E3, #86A8E7,#5FFBF1);
+    -fx-text-fill:  #FFFFFF;
+    -fx-graphic: url('../images/setting-white.png');
+}
+
+
+
+.mfx-button-Logout{
+    -fx-font-family: 'Roboto Bold';
+    -fx-font-size: 16;
+    -fx-text-fill:  #485460;
+    -fx-background-color:  #FFFFFF;
+    -fx-background-radius: 0 25 25 0;
+}
+
+
+.mfx-button-Logout:hover {
+    -fx-background-color:  linear-gradient(to right top, #0984E3, #86A8E7,#5FFBF1);
+    -fx-text-fill:  #FFFFFF;
+    -fx-graphic: url('../images/logout-white.png');
+}
+
+
+.mfx-button-active {
+    -fx-background-color:  linear-gradient(to right top, #0984E3, #86A8E7,#5FFBF1);
+    -fx-text-fill:  #FFFFFF;
+}
+
+
+
+/*User Dashboard*/
+
+.mfx-button-BookHistory{
+    -fx-font-family: 'Roboto Bold';
+    -fx-font-size: 16;
+    -fx-text-fill:  #485460;
+    -fx-background-color:  #FFFFFF;
+    -fx-background-radius: 0 25 25 0;
+}
+
+
+.mfx-button-BookHistory:hover {
+    -fx-background-color:  linear-gradient(to right top, #0984E3, #86A8E7,#5FFBF1);
+    -fx-text-fill:  #FFFFFF;
+    -fx-graphic: url('../images/borrowBooks-white.png');
+}
+
+.mfx-button-BookHistory-active{
+    -fx-background-color:  linear-gradient(to right top, #0984E3, #86A8E7,#5FFBF1);
+    -fx-text-fill:  #FFFFFF;
+    -fx-graphic: url('../images/borrowBooks-white.png');
+}
+
+.mfx-button-BookSearch{
+    -fx-font-family: 'Roboto Bold';
+    -fx-font-size: 16;
+    -fx-text-fill:  #485460;
+    -fx-background-color:  #FFFFFF;
+    -fx-background-radius: 0 25 25 0;
+}
+
+.mfx-button-BookSearch:hover {
+    -fx-background-color:  linear-gradient(to right top, #0984E3, #86A8E7,#5FFBF1);
+    -fx-text-fill:  #FFFFFF;
+    -fx-graphic: url('../images/book-white.png');
+}
+
+.mfx-button-BookSearch-active{
+    -fx-background-color:  linear-gradient(to right top, #0984E3, #86A8E7,#5FFBF1);
+    -fx-text-fill:  #FFFFFF;
+    -fx-graphic: url('../images/book-white.png');
+}

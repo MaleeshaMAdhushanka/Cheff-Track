@@ -1,0 +1,66 @@
+@import '../fonts/Fonts.css';
+
+.pane{
+    -fx-background-color: #FFFFFFFF;
+}
+
+.label-hostel{
+    -fx-font-family: 'Roboto Bold';
+    -fx-text-fill: #0984e3;
+}
+
+.label-d24{
+    -fx-font-family: 'Roboto Bold';
+}
+
+.label-welcome{
+    -fx-font-family: 'Open Sans Bold';
+    -fx-text-fill: #0984e3;
+}
+
+.label-loginWithUsername{
+    -fx-font-family: 'Open Sans Regular';
+    -fx-text-fill: #636e72;
+}
+
+.label-error{
+    -fx-font-family: 'Open Sans Regular';
+    -fx-text-fill: #ff3e56;
+}
+
+.label-or{
+    -fx-font-family: 'Open Sans Regular';
+    -fx-text-fill: #000000;
+}
+
+.label-dontHaveAccount{
+    -fx-font-family: 'Open Sans Regular';
+    -fx-text-fill: #000000;
+}
+
+.label-register{
+    -fx-font-family: 'Open Sans Bold';
+    -fx-text-fill: #0984e3;
+    -fx-cursor: hand;
+}
+
+.mfx-text-field{
+    -mfx-main: #0984e3;
+    -fx-font-size: 15;
+    -fx-font-family: 'Visby Round CF Medium';
+}
+
+
+.mfx-text-field-error{
+    -mfx-main: #ff3e56;
+    -fx-font-size: 15;
+    -fx-font-family: 'Visby Round CF Medium';
+}
+
+
+.mfx-button-login{
+    -fx-font-size: 14px;
+    -fx-font-family: 'Roboto Medium';
+    -fx-background-color: #0984e3;
+    -fx-text-fill: #ffffff;
+}

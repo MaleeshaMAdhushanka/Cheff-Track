@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="680.0" prefWidth="804.0" stylesheets="@../../../../../../Downloads/book-worm-main/src/main/resources/assets/css/PageStyles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.culinary.controller.AdminSettingFormController">
+   <children>
+      <Label layoutX="27.0" layoutY="52.0" styleClass="label-dashboard" stylesheets="@../../../../../../Downloads/book-worm-main/src/main/resources/assets/css/PageStyles.css" text="Settings">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="83.0" layoutY="129.0" prefHeight="493.0" prefWidth="650.0" styleClass="pane-settings">
+         <children>
+            <MFXTextField fx:id="txtUsername" floatMode="BORDER" floatingText="Username" layoutX="197.0" layoutY="246.0" prefHeight="55.0" prefWidth="270.0" styleClass="mfx-text-field-details" />
+            <MFXPasswordField fx:id="txtPassword" floatMode="BORDER" floatingText="Password" layoutX="197.0" layoutY="325.0" prefHeight="55.0" prefWidth="270.0" styleClass="mfx-text-field-details" />
+            <MFXButton layoutX="197.0" layoutY="418.0" onAction="#btnUpdateOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-update-settings" text="Update" />
+            <MFXButton layoutX="357.0" layoutY="418.0" onAction="#btnDeleteOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-remove-settings" text="Remove" />
+            <Circle fx:id="circleImg" fill="WHITE" layoutX="334.0" layoutY="130.0" onMouseClicked="#circleImgOnAction" radius="97.0" stroke="BLACK" strokeType="INSIDE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+         </children>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" offsetX="-1.0" offsetY="2.0" spread="0.12">
+               <color>
+                  <Color opacity="0.20000000298023224" />
+               </color>
+            </DropShadow>
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

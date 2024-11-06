@@ -1,0 +1,58 @@
+@import '../fonts/Fonts.css';
+
+
+.pane{
+    -fx-background-color: #FFFFFFFF;
+}
+
+
+.label-title{
+    -fx-font-family: 'Open Sans Bold';
+}
+
+
+.label-properties{
+    -fx-font-family: 'Roboto Medium';
+    -fx-text-fill: #636e72;
+}
+
+
+.mfx-text-field{
+    -mfx-main: #0984e3;
+    -fx-font-size: 15;
+    -fx-font-family: 'Visby Round CF Medium';
+}
+
+.mfx-text-field-error{
+    -mfx-main: #ff3e56;
+    -fx-font-size: 15;
+    -fx-font-family: 'Visby Round CF Medium';
+}
+
+.mfx-combo-box{
+    -mfx-main: #0984e3;
+    -fx-font-size: 14;
+    -fx-font-family: 'Visby Round CF Medium';
+}
+
+.mfx-combo-box-error{
+    -mfx-main:  #f5194d;
+    -fx-font-size: 14;
+    -fx-font-family: 'Visby Round CF Medium';
+}
+
+
+
+.mfx-button-add{
+    -fx-font-size: 14px;
+    -fx-font-family: 'Roboto Medium';
+    -fx-background-color: #0984e3;
+    -fx-text-fill: #ffffff;
+}
+
+.mfx-button-cancel{
+    -fx-font-size: 14px;
+    -fx-font-family: 'Roboto Medium';
+    -fx-background-color:  #2d3436;
+    -fx-text-fill: #ffffff;
+}

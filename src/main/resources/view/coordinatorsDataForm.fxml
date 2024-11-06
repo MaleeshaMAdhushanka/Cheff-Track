@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="430.0" styleClass="pane" stylesheets="@../../../../../../Downloads/book-worm-main/src/main/resources/assets/css/PopUpStyles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.culinary.controller.CoordinatorsDataFromController">
+   <children>
+      <Label fx:id="lblAction" layoutX="45.0" layoutY="44.0" prefHeight="42.0" prefWidth="297.0" styleClass="label-title" text="Add Coordinators">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="135.0" styleClass="label-properties" text="Email">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="207.0" styleClass="label-properties" text="Name">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="282.0" styleClass="label-properties" text="Address">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="362.0" styleClass="label-properties" text="Password">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <MFXTextField fx:id="txtEmail" floatMode="DISABLED" layoutX="191.0" layoutY="124.0" prefHeight="45.0" prefWidth="197.0" styleClass="mfx-text-field" stylesheets="@../../../../../../Downloads/book-worm-main/src/main/resources/assets/css/PopUpStyles.css" />
+      <MFXTextField fx:id="txtName" floatMode="DISABLED" layoutX="191.0" layoutY="196.0" prefHeight="45.0" prefWidth="197.0" styleClass="mfx-text-field" stylesheets="@../../../../../../Downloads/book-worm-main/src/main/resources/assets/css/PopUpStyles.css" />
+      <MFXTextField fx:id="txtAddress" floatMode="DISABLED" layoutX="191.0" layoutY="271.0" prefHeight="45.0" prefWidth="197.0" styleClass="mfx-text-field" stylesheets="@../../../../../../Downloads/book-worm-main/src/main/resources/assets/css/PopUpStyles.css" />
+      <MFXButton fx:id="btnAction" layoutX="87.0" layoutY="467.0" onAction="#btnActionOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-add" stylesheets="@../../../../../../Downloads/book-worm-main/src/main/resources/assets/css/PopUpStyles.css" text="Add" />
+      <MFXButton layoutX="244.0" layoutY="467.0" onAction="#btnCancel" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-cancel" stylesheets="@../../../../../../Downloads/book-worm-main/src/main/resources/assets/css/PopUpStyles.css" text="Cancel" />
+      <MFXPasswordField fx:id="txtPassword" floatMode="DISABLED" layoutX="191.0" layoutY="349.0" prefHeight="45.0" prefWidth="197.0" />
+   </children>
+</AnchorPane>

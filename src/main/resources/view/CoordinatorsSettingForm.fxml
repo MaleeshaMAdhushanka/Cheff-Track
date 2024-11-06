@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="680.0" prefWidth="804.0" stylesheets="@../../../../../../Downloads/book-worm-main/src/main/resources/assets/css/PageStyles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.culinary.controller.CoordinatorsSettingFromController">
+   <children>
+      <AnchorPane layoutX="77.0" layoutY="109.0" prefHeight="527.0" prefWidth="650.0" styleClass="pane-settings">
+         <children>
+            <MFXButton layoutX="197.0" layoutY="455.0" onAction="#btnUpdateOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-update-settings" text="Update" />
+            <MFXButton layoutX="357.0" layoutY="455.0" onAction="#btnDeleteOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-remove-settings" text="Remove" />
+            <Circle fx:id="circleImg" fill="WHITE" layoutX="331.0" layoutY="98.0" onMouseClicked="#circleImgOnAction" radius="74.0" stroke="BLACK" strokeType="INSIDE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <MFXTextField fx:id="txtEmail" floatMode="BORDER" floatingText="Email" layoutX="196.0" layoutY="189.0" prefHeight="50.0" prefWidth="270.0" styleClass="mfx-text-field-details" />
+            <MFXPasswordField fx:id="txtPassword" floatMode="BORDER" floatingText="Password" layoutX="196.0" layoutY="383.0" prefHeight="50.0" prefWidth="270.0" styleClass="mfx-text-field-details" />
+            <MFXTextField fx:id="txtName" floatMode="BORDER" floatingText="Name" layoutX="197.0" layoutY="253.0" prefHeight="50.0" prefWidth="270.0" styleClass="mfx-text-field-details" />
+            <MFXTextField fx:id="txtAddress" floatMode="BORDER" floatingText="Address" layoutX="197.0" layoutY="319.0" prefHeight="50.0" prefWidth="270.0" styleClass="mfx-text-field-details" />
+         </children>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" offsetX="-1.0" offsetY="2.0" spread="0.12">
+               <color>
+                  <Color opacity="0.20000000298023224" />
+               </color>
+            </DropShadow>
+         </effect>
+      </AnchorPane>
+      <Label layoutX="27.0" layoutY="52.0" styleClass="label-dashboard" stylesheets="@../../../../../../Downloads/book-worm-main/src/main/resources/assets/css/PageStyles.css" text="Settings">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
