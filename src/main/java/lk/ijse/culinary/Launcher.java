@@ -30,6 +30,7 @@ public class Launcher extends Application {
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
+        System.out.println("Hi mal pipenne");
     }
 
     public static void main(String[] args) {
