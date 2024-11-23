@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="680.0" prefWidth="804.0" stylesheets="@../../../../../../Downloads/book-worm-main/src/main/resources/assets/css/PageStyles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.culinary.controller.CoordinatorsSettingFromController">
+<AnchorPane prefHeight="680.0" prefWidth="804.0" stylesheets="@../assets/css/PageStyles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.culinary.controller.CoordinatorsSettingFromController">
    <children>
       <AnchorPane layoutX="77.0" layoutY="109.0" prefHeight="527.0" prefWidth="650.0" styleClass="pane-settings">
          <children>
@@ -35,7 +35,7 @@
             </DropShadow>
          </effect>
       </AnchorPane>
-      <Label layoutX="27.0" layoutY="52.0" styleClass="label-dashboard" stylesheets="@../../../../../../Downloads/book-worm-main/src/main/resources/assets/css/PageStyles.css" text="Settings">
+      <Label layoutX="341.0" layoutY="34.0" styleClass="label-dashboard" stylesheets="@../assets/css/PageStyles.css" text="Settings">
          <font>
             <Font size="30.0" />
          </font>

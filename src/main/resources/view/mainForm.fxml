@@ -4,13 +4,14 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="630.0" prefWidth="950.0" styleClass="pane" stylesheets="@../../../../../../Downloads/book-worm-main/src/main/resources/assets/css/LoginPageStyles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.culinary.controller.MainFormController">
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="950.0" stylesheets="@../assets/css/LoginPageStyles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.culinary.controller.MainFormController">
    <children>
-      <ImageView fitHeight="630.0" fitWidth="485.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="644.0" fitWidth="485.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/images/Log.jpg" />
          </image>
       </ImageView>
-      <AnchorPane fx:id="holderPane" layoutX="468.0" prefHeight="630.0" prefWidth="482.0" />
+      <AnchorPane fx:id="holderPane" layoutX="433.0" prefHeight="644.0" prefWidth="517.0" />
    </children>
 </AnchorPane>

@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="registerPane" prefHeight="630.0" prefWidth="482.0" styleClass="pane" stylesheets="@../../../../../../Downloads/book-worm-main/src/main/resources/assets/css/LoginPageStyles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.culinary.controller.CoordinatorsRegisterFromController">
+<AnchorPane fx:id="registerPane" prefHeight="630.0" prefWidth="482.0" styleClass="pane" stylesheets="@../assets/css/LoginPageStyles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.culinary.controller.CoordinatorsRegisterFromController">
    <children>
       <Label layoutX="108.0" layoutY="52.0" styleClass="label-welcome" text="Register">
          <font>
@@ -36,12 +36,12 @@
          </font>
       </Label>
       <MFXPasswordField fx:id="txtConfirmPassword" floatMode="BORDER" floatingText="Confirm Password" layoutX="109.0" layoutY="356.0" prefHeight="50.0" prefWidth="270.0" styleClass="mfx-text-field" />
-      <Label layoutX="278.0" layoutY="22.0" prefHeight="30.0" prefWidth="110.0" styleClass="label-hostel" text="Cheff">
+      <Label layoutX="310.0" layoutY="22.0" prefHeight="36.0" prefWidth="70.0" styleClass="label-hostel" text="Cheff">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-      <Label layoutX="388.0" layoutY="22.0" styleClass="label-d24" text="Track">
+      <Label layoutX="379.0" layoutY="25.0" styleClass="label-d24" text="Track">
          <font>
             <Font size="25.0" />
          </font>

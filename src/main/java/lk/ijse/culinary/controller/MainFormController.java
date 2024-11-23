@@ -12,11 +12,12 @@ public class MainFormController {
     @FXML
     private AnchorPane holderPane;
 
-    public  void  initialize() throws IOException {
-       FXMLLoader fxmlLoader =  new FXMLLoader(getClass().getResource("/view/CoordinatorsLoginForm.fxml"));
-        Pane registerPane = fxmlLoader.load();
+    public  void initialize() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/CoordinatorsLoginForm.fxml"));
+        Pane registerPane = (Pane) fxmlLoader.load();
         holderPane.getChildren().clear();
         holderPane.getChildren().add(registerPane);
+
     }
 
 }
