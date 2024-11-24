@@ -2,7 +2,7 @@ package lk.ijse.culinary.util;
 
 
 //import lk.ijse.culinary.entity.*;
-import lk.ijse.culinary.entity.Programs;
+import lk.ijse.culinary.entity.Program;
 import lk.ijse.culinary.entity.Student;
 import lk.ijse.culinary.entity.Student_Program;
 import lk.ijse.culinary.entity.User;
@@ -23,7 +23,7 @@ public class SessionFactoryConfig {
                 .addAnnotatedClass(Student_Program.class)
                 .addAnnotatedClass(Student.class)
                 .addAnnotatedClass(Package.class)
-                .addAnnotatedClass(Programs.class)
+                .addAnnotatedClass(Program.class)
                 .buildSessionFactory();
     }
 
