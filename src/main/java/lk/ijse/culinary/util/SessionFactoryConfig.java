@@ -2,6 +2,10 @@ package lk.ijse.culinary.util;
 
 
 //import lk.ijse.culinary.entity.*;
+import lk.ijse.culinary.entity.Programs;
+import lk.ijse.culinary.entity.Student;
+import lk.ijse.culinary.entity.Student_Program;
+import lk.ijse.culinary.entity.User;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -15,7 +19,11 @@ public class SessionFactoryConfig {
     private SessionFactoryConfig() {
         sessionFactory = new Configuration()
                 .mergeProperties(Utility.getProperties())
-
+                .addAnnotatedClass(User.class)
+                .addAnnotatedClass(Student_Program.class)
+                .addAnnotatedClass(Student.class)
+                .addAnnotatedClass(Package.class)
+                .addAnnotatedClass(Programs.class)
                 .buildSessionFactory();
     }
 
