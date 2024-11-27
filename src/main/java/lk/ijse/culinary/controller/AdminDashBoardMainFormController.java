@@ -41,6 +41,9 @@ public class AdminDashBoardMainFormController {
         private Pane imgAndNameHolderPane;
 
         @FXML
+        private MFXButton btnPayment;
+
+        @FXML
         void btnDashboardOnAction(ActionEvent event) {
 
         }
@@ -69,7 +72,9 @@ public class AdminDashBoardMainFormController {
         void btnUserOnAction(ActionEvent event) {
 
         }
-
+        @FXML
+         void btnPaymentsOnAction(ActionEvent actionEvent) {
     }
+}
 
 

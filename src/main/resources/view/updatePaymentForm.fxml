@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="653.0" stylesheets="@../assets/css/PopUpStyles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.culinary.controller.updatePaymentFormController">
+    <children>
+        <Label layoutX="175.0" layoutY="33.0" prefHeight="42.0" prefWidth="303.0" styleClass="label-dashboard" stylesheets="@../assets/css/PageStyles.css" text="Update Course Payment">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Label>
+        <Label layoutX="117.0" layoutY="212.0" styleClass="label-properties" text="Student ID:">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <Label layoutX="117.0" layoutY="289.0" styleClass="label-properties" text="Name">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <Label layoutX="117.0" layoutY="361.0" styleClass="label-properties" text="Course:">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <MFXTextField fx:id="txtStudentID" floatMode="DISABLED" layoutX="241.0" layoutY="203.0" prefHeight="45.0" prefWidth="272.0" styleClass="mfx-text-field" stylesheets="@../assets/css/PopUpStyles.css" />
+        <MFXTextField fx:id="txtName" floatMode="DISABLED" layoutX="241.0" layoutY="279.0" prefHeight="45.0" prefWidth="272.0" styleClass="mfx-text-field" stylesheets="@../assets/css/PopUpStyles.css" />
+        <MFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="194.0" layoutY="475.0" onAction="#btnUpdateOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-add" stylesheets="@../assets/css/PopUpStyles.css" text="Update Pay" />
+        <MFXButton fx:id="btnCancel" buttonType="RAISED" layoutX="351.0" layoutY="475.0" onAction="#btnCancelOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-cancel" stylesheets="@../assets/css/PopUpStyles.css" text="Cancel" />
+        <MFXTextField fx:id="txtPayment" floatMode="DISABLED" layoutX="241.0" layoutY="413.0" prefHeight="45.0" prefWidth="272.0" styleClass="mfx-text-field" stylesheets="@../assets/css/PopUpStyles.css" />
+        <Label layoutX="113.0" layoutY="143.0" styleClass="label-properties" text="Payment ID:">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <Label layoutX="117.0" layoutY="422.0" styleClass="label-properties" text="Payment:">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+      <MFXTextField fx:id="txtPaymentId" floatMode="DISABLED" layoutX="241.0" layoutY="133.0" prefHeight="45.0" prefWidth="272.0" styleClass="mfx-text-field" stylesheets="@../assets/css/PopUpStyles.css" />
+      <MFXTextField fx:id="txtName1" floatMode="DISABLED" layoutX="241.0" layoutY="351.0" prefHeight="45.0" prefWidth="272.0" styleClass="mfx-text-field" stylesheets="@../assets/css/PopUpStyles.css" />
+      <Line endX="107.66665649414062" layoutX="311.0" layoutY="75.0" startX="-100.0" stroke="#259ed2" />
+    </children>
+</AnchorPane>

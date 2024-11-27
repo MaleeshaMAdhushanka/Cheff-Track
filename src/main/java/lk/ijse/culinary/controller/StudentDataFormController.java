@@ -1,43 +1,58 @@
 package lk.ijse.culinary.controller;
 
 import io.github.palexdev.materialfx.controls.MFXButton;
+import io.github.palexdev.materialfx.controls.MFXComboBox;
+import io.github.palexdev.materialfx.controls.MFXDatePicker;
 import io.github.palexdev.materialfx.controls.MFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
 public class StudentDataFormController {
-                @FXML
-                private MFXButton btnAction;
 
-                @FXML
-                private Label lblAction;
+    @FXML
+    private MFXButton btnAdd;
 
-                @FXML
-                private MFXTextField txtAddress;
+    @FXML
+    private MFXButton btnCancel;
 
-                @FXML
-                private MFXTextField txtEmail;
+    @FXML
+    private MFXComboBox<?> cmbCourse;
 
-                @FXML
-                private MFXTextField txtFirstName;
+    @FXML
+    private MFXTextField contact;
 
-                @FXML
-                private MFXTextField txtStudentID;
+    @FXML
+    private MFXDatePicker dateofbirth;
 
-                @FXML
-                private MFXTextField txtlastName;
+    @FXML
+    private Label lblAction;
 
-                @FXML
-                void btnActionOnAction(ActionEvent event) {
+    @FXML
+    private Label lblstudentId;
 
-                }
+    @FXML
+    private MFXTextField txtAddress;
 
-                @FXML
-                void btnCancel(ActionEvent event) {
+    @FXML
+    private MFXTextField txtEmail;
 
-                }
+    @FXML
+    private MFXTextField txtName;
 
-        }
+    @FXML
+    void btnAddOnAction(ActionEvent event) {
 
+    }
 
+    @FXML
+    void btnCancelOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void cmbCourseOnAction(ActionEvent event) {
+
+    }
+
+}

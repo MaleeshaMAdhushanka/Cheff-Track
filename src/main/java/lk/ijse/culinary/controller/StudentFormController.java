@@ -1,5 +1,6 @@
 package lk.ijse.culinary.controller;
 
+import io.github.palexdev.materialfx.controls.MFXButton;
 import io.github.palexdev.materialfx.controls.MFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -7,48 +8,52 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
 
-
 public class StudentFormController {
 
-                @FXML
-                private TableColumn<?, ?> colAdress;
+    @FXML
+    private MFXButton btnAdd;
 
-                @FXML
-                private TableColumn<?, ?> colEmail;
+    @FXML
+    private MFXButton btnSearch;
 
-                @FXML
-                private TableColumn<?, ?> colFirstName;
+    @FXML
+    private TableColumn<?, ?> colAddress;
 
-                @FXML
-                private TableColumn<?, ?> colId;
+    @FXML
+    private TableColumn<?, ?> colContact;
 
-                @FXML
-                private TableColumn<?, ?> colLastName;
+    @FXML
+    private TableColumn<?, ?> colDob;
 
-                @FXML
-                private TableColumn<?, ?> colRemove;
+    @FXML
+    private TableColumn<?, ?> colEmail;
 
-                @FXML
-                private TableColumn<?, ?> colUpadate;
+    @FXML
+    private TableColumn<?, ?> colId;
 
-                @FXML
-                private AnchorPane studentPane;
+    @FXML
+    private TableColumn<?, ?> colName;
 
-                @FXML
-                private TableView<?> tblStudent;
+    @FXML
+    private TableColumn<?, ?> colRemove;
 
-                @FXML
-                private MFXTextField txtSearch;
+    @FXML
+    private AnchorPane studentPane;
 
-                @FXML
-                void btnAddOnAction(ActionEvent event) {
+    @FXML
+    private TableView<?> tblStudent;
 
-                }
+    @FXML
+    private MFXTextField txtSearch;
 
-                @FXML
-                void btnSearchOnAction(ActionEvent event) {
+    @FXML
+    void btnAddOnAction(ActionEvent event) {
 
-                }
+    }
 
-        }
+    @FXML
+    void btnSearchOnAction(ActionEvent event) {
 
+    }
+
+}

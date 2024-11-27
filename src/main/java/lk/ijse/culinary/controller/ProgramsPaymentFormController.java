@@ -10,31 +10,34 @@ import javafx.scene.control.TableView;
 public class ProgramsPaymentFormController {
 
     @FXML
-    private MFXButton btnRemove;
+    private MFXButton btnAdd;
 
     @FXML
-    private MFXButton btnRemove1;
+    private MFXButton btnSearch;
 
     @FXML
-    private TableColumn<?, ?> colAddress;
-
-    @FXML
-    private TableColumn<?, ?> colContact;
-
-    @FXML
-    private TableColumn<?, ?> colDob;
-
-    @FXML
-    private TableColumn<?, ?> colEmail;
-
-    @FXML
-    private TableColumn<?, ?> colId;
+    private TableColumn<?, ?> colID;
 
     @FXML
     private TableColumn<?, ?> colName;
 
     @FXML
-    private TableView<?> tblUser;
+    private TableColumn<?, ?> colPayAmount;
+
+    @FXML
+    private TableColumn<?, ?> colPayDate;
+
+    @FXML
+    private TableColumn<?, ?> colPaymentID;
+
+    @FXML
+    private TableColumn<?, ?> colProgramId;
+
+    @FXML
+    private TableColumn<?, ?> colRemove;
+
+    @FXML
+    private TableView<?> tblPayment;
 
     @FXML
     private MFXTextField txtSearch;
@@ -45,14 +48,8 @@ public class ProgramsPaymentFormController {
     }
 
     @FXML
-    void btnRemoveOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
     void btnSearchOnAction(ActionEvent event) {
 
     }
 
 }
-

@@ -13,8 +13,6 @@ public class AdminProgramsDataFormController {
                 @FXML
                 private MFXButton btnAction;
 
-                @FXML
-                private MFXComboBox<?> colType;
 
                 @FXML
                 private Label lblAction;

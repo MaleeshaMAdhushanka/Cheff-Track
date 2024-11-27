@@ -1,7 +1,5 @@
 package lk.ijse.culinary.controller;
 
-
-
 import io.github.palexdev.materialfx.controls.MFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,16 +8,10 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
 
-
-
 public class CoordinatorsDashBoardsMainController {
 
-
         @FXML
-        private MFXButton btnBookSearch1;
-
-        @FXML
-        private MFXButton btnBorrowBook;
+        private MFXButton btnPayment;
 
         @FXML
         private MFXButton btnSetting;
@@ -45,11 +37,6 @@ public class CoordinatorsDashBoardsMainController {
         }
 
         @FXML
-        void btnBorrowBookOnAction(ActionEvent event) {
-
-        }
-
-        @FXML
         void btnLogoutOnAction(ActionEvent event) {
 
         }
@@ -64,8 +51,4 @@ public class CoordinatorsDashBoardsMainController {
 
         }
 
-    }
-
-
-
-
+}

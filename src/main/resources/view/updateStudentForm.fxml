@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXDatePicker?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="653.0" styleClass="pane" stylesheets="@../assets/css/PopUpStyles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.culinary.controller.updateStudentFromController">
+    <children>
+        <Label fx:id="lblAction" layoutX="234.0" layoutY="32.0" styleClass="label-title" text="Update Student">
+            <font>
+                <Font size="26.0" />
+            </font>
+        </Label>
+        <Label layoutX="68.0" layoutY="196.0" styleClass="label-properties" text="Email">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <Label layoutX="68.0" layoutY="268.0" styleClass="label-properties" text="Name">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <Label layoutX="58.0" layoutY="345.0" styleClass="label-properties" text="Address">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <Label layoutX="173.0" layoutY="400.0" styleClass="label-properties" text="Course">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <MFXTextField fx:id="txtEmail" floatMode="DISABLED" layoutX="139.0" layoutY="196.0" prefHeight="45.0" prefWidth="197.0" styleClass="mfx-text-field" stylesheets="@../assets/css/PopUpStyles.css" />
+        <MFXTextField fx:id="txtName" floatMode="DISABLED" layoutX="139.0" layoutY="259.0" prefHeight="45.0" prefWidth="197.0" styleClass="mfx-text-field" stylesheets="@../assets/css/PopUpStyles.css" />
+        <MFXTextField fx:id="txtAddress" floatMode="DISABLED" layoutX="139.0" layoutY="334.0" prefHeight="45.0" prefWidth="197.0" styleClass="mfx-text-field" stylesheets="@../assets/css/PopUpStyles.css" />
+        <MFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="173.0" layoutY="473.0" onAction="#btnUpdateOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-add" stylesheets="@../assets/css/PopUpStyles.css" text="Update" />
+        <MFXButton fx:id="btnCancel" buttonType="RAISED" layoutX="384.0" layoutY="473.0" onAction="#btnCancelOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-cancel" stylesheets="@../assets/css/PopUpStyles.css" text="Cancel" />
+        <MFXComboBox fx:id="cmbCourse" layoutX="245.0" layoutY="389.0" onAction="#cmbCourseOnAction" prefHeight="45.0" prefWidth="197.0" />
+        <MFXDatePicker fx:id="dateofbirth" layoutX="398.0" layoutY="201.0" />
+        <Label layoutX="398.0" layoutY="159.0" styleClass="label-properties" text="Date Of Birth">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <MFXTextField fx:id="contact" floatMode="DISABLED" layoutX="399.0" layoutY="311.0" prefHeight="45.0" prefWidth="197.0" styleClass="mfx-text-field" stylesheets="@../assets/css/PopUpStyles.css" />
+        <Label layoutX="398.0" layoutY="268.0" styleClass="label-properties" text="Contact">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <Label layoutX="40.0" layoutY="137.0" styleClass="label-properties" text="Student ID:">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+      <MFXTextField fx:id="txtStudentId" floatMode="DISABLED" layoutX="139.0" layoutY="126.0" prefHeight="45.0" prefWidth="197.0" styleClass="mfx-text-field" stylesheets="@../assets/css/PopUpStyles.css" />
+      <Line endX="100.0" layoutX="336.0" layoutY="81.0" startX="-100.0" stroke="#18b2b7" />
+    </children>
+</AnchorPane>

@@ -10,14 +10,14 @@ import javax.persistence.Table;
 @Table(name = "program")
 public class Program {
     @Id
-    @Column(name = "program_id")
+    @Column(name = "program_id", length = 10)
     private int programId;
 
     @Column(name = "program_name")
     private String programName;
 
 
-    @Column(name = "duration")
+    @Column(name = "program_duration")
     private String duration;
 
     @Column(name = "program_fee")

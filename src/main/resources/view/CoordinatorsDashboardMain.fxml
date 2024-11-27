@@ -24,15 +24,7 @@
                         <Insets left="35.0" />
                      </padding>
                   </MFXButton>
-                  <MFXButton fx:id="btnBorrowBook" alignment="BASELINE_LEFT" onAction="#btnBorrowBookOnAction" prefHeight="51.0" prefWidth="197.0" styleClass="mfx-button-BookHistory" text="Programs">
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                     <padding>
-                        <Insets left="35.0" />
-                     </padding>
-                  </MFXButton>
-                  <MFXButton fx:id="btnBookSearch1" alignment="BASELINE_LEFT" onAction="#btnBookSearchOnAction" prefHeight="51.0" prefWidth="197.0" styleClass="mfx-button-BookSearch" text="Place Order">
+                  <MFXButton fx:id="btnPayment" alignment="BASELINE_LEFT" onAction="#btnBookSearchOnAction" prefHeight="51.0" prefWidth="197.0" styleClass="mfx-button-BookSearch" text="Payments">
                      <padding>
                         <Insets left="35.0" />
                      </padding>

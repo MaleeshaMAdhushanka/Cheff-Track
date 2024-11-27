@@ -39,6 +39,11 @@
                         <Insets left="35.0" />
                      </padding>
                   </MFXButton>
+                  <MFXButton fx:id="btnPayment" alignment="BASELINE_LEFT" onAction="#btnPaymentsOnAction" prefHeight="51.0" prefWidth="197.0" styleClass="mfx-button-BorrowBooks" text="Payments">
+                     <padding>
+                        <Insets left="35.0" />
+                     </padding>
+                  </MFXButton>
                   <MFXButton fx:id="btnSetting" alignment="BASELINE_LEFT" onAction="#btnSettingsOnAction" prefHeight="51.0" prefWidth="197.0" styleClass="mfx-button-Settings" text="Settings">
                      <graphic>
                         <ImageView pickOnBounds="true" preserveRatio="true">

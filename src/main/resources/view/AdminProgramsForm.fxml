@@ -17,20 +17,18 @@
             <Font size="30.0" />
          </font>
       </Label>
-      <MFXButton layoutX="667.0" layoutY="130.0" onAction="#btnAddOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-add" stylesheets="@../assets/css/PageStyles.css" text="Add" />
-      <TableView fx:id="tblBook" focusTraversable="false" layoutX="27.0" layoutY="197.0" prefHeight="433.0" prefWidth="749.0" stylesheets="@../assets/css/TableStyle.css">
+      <MFXButton fx:id="btnAdd" layoutX="667.0" layoutY="130.0" onAction="#btnAddOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-add" stylesheets="@../assets/css/PageStyles.css" text="Add" />
+      <TableView fx:id="tblProgram" focusTraversable="false" layoutX="27.0" layoutY="197.0" prefHeight="433.0" prefWidth="749.0" stylesheets="@../assets/css/TableStyle.css">
          <columns>
             <TableColumn fx:id="colId" prefWidth="68.0" style="-fx-alignment: center;" text="ID" />
-            <TableColumn fx:id="colProgramName" prefWidth="163.0" style="-fx-alignment: center;" text="Program Name" />
-            <TableColumn fx:id="colDuration" prefWidth="124.0" style="-fx-alignment: center;" text="Duration" />
-            <TableColumn fx:id="colFee" prefWidth="131.0" style="-fx-alignment: center;" text="Fee" />
-            <TableColumn fx:id="colType" prefWidth="85.0" style="-fx-alignment: center;" text="Type" />
-            <TableColumn fx:id="colUpdate" prefWidth="96.0" style="-fx-alignment: center;" text="Update" />
-            <TableColumn fx:id="colRemove" style="-fx-alignment: center;" text="Remove" />
+            <TableColumn fx:id="colProgramName" prefWidth="206.66663360595703" style="-fx-alignment: center;" text="Program Name" />
+            <TableColumn fx:id="colDuration" prefWidth="134.66668701171875" style="-fx-alignment: center;" text="Duration" />
+            <TableColumn fx:id="colFee" prefWidth="170.66659545898438" style="-fx-alignment: center;" text="Fee" />
+            <TableColumn fx:id="colRemove" prefWidth="169.33331298828125" style="-fx-alignment: center;" text="Remove" />
          </columns>
       </TableView>
       <MFXTextField fx:id="txtSearch" floatMode="DISABLED" floatingText="Search" layoutX="27.0" layoutY="130.0" prefHeight="45.0" prefWidth="175.0" promptText="Search" styleClass="mfx-text-field-details" />
-      <MFXButton layoutX="238.0" layoutY="133.0" onAction="#btnSearchOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-add" stylesheets="@../assets/css/PageStyles.css" text="Search">
+      <MFXButton fx:id="btnSearch" layoutX="238.0" layoutY="133.0" onAction="#btnSearchOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-add" stylesheets="@../assets/css/PageStyles.css" text="Search">
          <graphic>
             <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                <image>

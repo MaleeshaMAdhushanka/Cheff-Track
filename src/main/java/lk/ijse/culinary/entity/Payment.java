@@ -1,22 +1,24 @@
 package lk.ijse.culinary.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
+import java.util.Date;
 
+@Entity
+@Table(name = "payment")
 public class Payment {
 
 
     @Id
-    @Column(name = "pay_id")
-    private String pay_id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "payment_id")
+    private Long pay_id;
 
-    @Column(name = "pay_date")
-    private String pay_date;
+    @Column(name = "payment")
+    private double payment;
 
-    @Column(name = "pay_amount")
-    private String pay_amount;
+    @Column(name = "payment_date")
+    private Date pay_date;
+
 
     @Column(name = "status")
     private  String status;
@@ -30,5 +32,9 @@ public class Payment {
     @ManyToOne
     @JoinColumn(name = "student_program_id")
     private Student_Program studentProgram;
+
+    @ManyToOne
+    @JoinColumn(name = "student_id")
+    private Student student;
 
 }
