@@ -1,40 +1,116 @@
+// Payment.java
 package lk.ijse.culinary.entity;
 
-import javax.persistence.*;
-import java.util.Date;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import java.time.LocalDate;
+@Data
+
+@NoArgsConstructor
 @Entity
-@Table(name = "payment")
 public class Payment {
-
-
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "payment_id")
-    private Long pay_id;
-
-    @Column(name = "payment")
-    private double payment;
-
-    @Column(name = "payment_date")
-    private Date pay_date;
-
-
-    @Column(name = "status")
-    private  String status;
-
-    @Column(name = "upfront_amount")
-    private double upfront_amount;
-
-    @Column(name = "balance_amount")
-    private double balance_amount;
+    private String payment_ID;
+    private LocalDate paymentDate;
+    private double payamount;
+    private String status;
+    private double upfrontAmount;
+    private double balanceAmount;
+    private String courseID;
+    private String studentEmail;
 
     @ManyToOne
-    @JoinColumn(name = "student_program_id")
-    private Student_Program studentProgram;
+    @JoinColumn(name = "studentCourse_ID")
+    private StudentCourse studentCourse;
 
-    @ManyToOne
-    @JoinColumn(name = "student_id")
-    private Student student;
+    // Constructor
+    public Payment(String payment_ID, LocalDate paymentDate, double payamount, String status, double upfrontAmount, double balanceAmount, String courseID, String studentEmail, StudentCourse studentCourse) {
+        this.payment_ID = payment_ID;
+        this.paymentDate = paymentDate;
+        this.payamount = payamount;
+        this.status = status;
+        this.upfrontAmount = upfrontAmount;
+        this.balanceAmount = balanceAmount;
+        this.courseID = courseID;
+        this.studentEmail = studentEmail;
+        this.studentCourse = studentCourse;
+    }
 
+    // Getters and setters
+    public String getPaymentID() {
+        return payment_ID;
+    }
+
+    public void setPaymentID(String payment_ID) {
+        this.payment_ID = payment_ID;
+    }
+
+    public LocalDate getPaymentDate() {
+        return paymentDate;
+    }
+
+    public void setPaymentDate(LocalDate paymentDate) {
+        this.paymentDate = paymentDate;
+    }
+
+    public double getPayamount() {
+        return payamount;
+    }
+
+    public void setPayamount(double payamount) {
+        this.payamount = payamount;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public double getUpfrontAmount() {
+        return upfrontAmount;
+    }
+
+    public void setUpfrontAmount(double upfrontAmount) {
+        this.upfrontAmount = upfrontAmount;
+    }
+
+    public double getBalanceAmount() {
+        return balanceAmount;
+    }
+
+    public void setBalanceAmount(double balanceAmount) {
+        this.balanceAmount = balanceAmount;
+    }
+
+    public String getCourseID() {
+        return courseID;
+    }
+
+    public void setCourseID(String courseID) {
+        this.courseID = courseID;
+    }
+
+    public String getStudentEmail() {
+        return studentEmail;
+    }
+
+    public void setStudentEmail(String studentEmail) {
+        this.studentEmail = studentEmail;
+    }
+
+    public StudentCourse getStudentCourse() {
+        return studentCourse;
+    }
+
+    public void setStudentCourse(StudentCourse studentCourse) {
+        this.studentCourse = studentCourse;
+    }
 }

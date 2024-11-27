@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="680.0" prefWidth="804.0" stylesheets="@../assets/css/PageStyles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.culinary.controller.CourseFormController">
+   <children>
+      <Label layoutX="27.0" layoutY="63.0" prefHeight="42.0" prefWidth="140.0" styleClass="label-dashboard" stylesheets="@../assets/css/PageStyles.css" text="Course">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <MFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="510.0" layoutY="130.0" onAction="#btnAddOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-add" stylesheets="@../assets/css/PageStyles.css" text="Add" />
+      <TableView fx:id="tblCourse" focusTraversable="false" layoutX="27.0" layoutY="197.0" prefHeight="433.0" prefWidth="749.0" stylesheets="@../assets/css/TableStyle.css">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="91.0" style="-fx-alignment: center;" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="168.0" style="-fx-alignment: center;" text="Name" />
+            <TableColumn fx:id="colDuration" prefWidth="182.0" style="-fx-alignment: center;" text="Duration" />
+            <TableColumn fx:id="colFee" prefWidth="187.0" style="-fx-alignment: center;" text="Fee" />
+            <TableColumn fx:id="colRemove" prefWidth="120.0" style="-fx-alignment: center;" text="Remove" />
+        </columns>
+      </TableView>
+      <MFXTextField fx:id="txtSearch" floatMode="DISABLED" floatingText="Search" layoutX="27.0" layoutY="130.0" prefHeight="45.0" prefWidth="175.0" promptText="Search" styleClass="mfx-text-field-details" />
+      <MFXButton fx:id="btnSearch" buttonType="RAISED" layoutX="240.0" layoutY="130.0" onAction="#btnSearchOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-add" stylesheets="@../assets/css/PageStyles.css" text="Search">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/search.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </MFXButton>
+      <ImageView fitHeight="30.0" fitWidth="40.0" layoutX="518.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/add.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

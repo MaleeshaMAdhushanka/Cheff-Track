@@ -8,13 +8,14 @@ import org.hibernate.query.Query;
 import java.util.List;
 
 public class AdminDAOImpl implements AdminDAO {
+
+
     private Session session;
 
     @Override
     public void setSession(Session session) {
         this.session = session;
     }
-
     @Override
     public List<Admin> getAll() {
         String hql = "FROM Admin";
@@ -22,20 +23,24 @@ public class AdminDAOImpl implements AdminDAO {
         return query.list();
     }
 
-
     @Override
     public void save(Admin entity) {
-        session.save(entity);
+      session.save(entity);
+
+
     }
 
     @Override
     public void update(Admin entity) {
-        session.update(entity);
+       session.update(entity);
+
+
     }
 
     @Override
     public void delete(Admin entity) {
         session.delete(entity);
+
     }
 
     @Override
@@ -53,14 +58,15 @@ public class AdminDAOImpl implements AdminDAO {
         return null;
     }
 
+
     @Override
-    public int updateAdminUsername(String userName, String oldUserName) {
+    public int updateAdminUsername(String userName, String oldUsername) {
         String hql ="UPDATE Admin set username = :username WHERE username = :oldUsername";
         Query query = session.createQuery(hql);
         query.setParameter("username", userName);
-        query.setParameter("oldUsername", oldUserName);
+        query.setParameter("oldUsername", oldUsername);
         int result = query.executeUpdate();
         return result;
-
     }
 }
+

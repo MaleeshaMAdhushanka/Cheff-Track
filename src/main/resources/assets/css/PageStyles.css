@@ -1,100 +1,125 @@
 @import '../fonts/Fonts.css';
 
-
-
-
-.label-dashboard{
+/* Typography Styles */
+.label-dashboard {
     -fx-font-family: 'Open Sans Bold';
+    -fx-text-fill: #2c3e50; /* Dark text for contrast */
 }
 
-
-
-.pane-admin-details{
+/* Pane Styles */
+.pane-admin-details {
     -fx-font-family: 'Open Sans';
     -fx-font-size: 18px;
-    -fx-background-color: #FFFFFFFF;
+    -fx-background-color: #ecf0f1; /* Light gray for clean background */
     -fx-background-radius: 15 0 0 15;
 }
 
-
-.mfx-button-add{
-    -fx-font-size: 14px;
-    -fx-font-family: 'Roboto Medium';
-    -fx-background-color: #0984e3;
-    -fx-text-fill: #ffffff;
-}
-
-.mfx-button-remove{
-    -fx-font-size: 14px;
-    -fx-font-family: 'Roboto Bold';
-    -fx-background-color: #f5194d;
-    -fx-text-fill: #ffffff;
-}
-
-.mfx-button-update{
-    -fx-font-size: 14px;
-    -fx-font-family: 'Roboto Bold';
-    -fx-background-color: #64f526;
-    -fx-text-fill: #ffffff;
-}
-
-.mfx-combo-box{
-    -mfx-main: #0984e3;
-    -fx-font-size: 14;
-    -fx-font-family: 'Visby Round CF Medium';
-}
-
-.mfx-dp-picker{
-    -mfx-main: #0984e3;
-    -fx-font-size: 14;
-    -fx-font-family: 'Visby Round CF Medium';
-}
-
-.mfx-dp-picker-error{
-    -mfx-main: #ff3e56;
-    -fx-font-size: 14;
-    -fx-font-family: 'Visby Round CF Medium';
-}
-
-
-.mfx-combo-box-error{
-    -mfx-main:  #f5194d;
-    -fx-font-size: 14;
-    -fx-font-family: 'Visby Round CF Medium';
-}
-
-
-.mfx-checkbox{
-    -mfx-main: #0984e3;
-}
-
-.pane-settings{
-    -fx-background-color: #FFFFFFFF;
+.pane-settings {
+    -fx-background-color: #ecf0f1;
     -fx-background-radius: 15 15 15 15;
 }
 
-.mfx-text-field-details{
-    -mfx-main: #0984e3;
+/* Button Styles */
+.mfx-button-add {
+    -fx-font-size: 14px;
+    -fx-font-family: 'Roboto Medium';
+    -fx-background-color: #0984e3; /* Teal */
+    -fx-text-fill: #ffffff; /* White text for readability */
+}
+
+.mfx-button-remove {
+    -fx-font-size: 14px;
+    -fx-font-family: 'Roboto Bold';
+    -fx-background-color: #e74c3c; /* Red for delete actions */
+    -fx-text-fill: #ffffff;
+}
+
+.mfx-button-update {
+    -fx-font-size: 14px;
+    -fx-font-family: 'Roboto Bold';
+    -fx-background-color: #27ae60; /* Green for success/update actions */
+    -fx-text-fill: #ffffff;
+}
+
+.mfx-button-update-settings {
+    -fx-font-size: 14px;
+    -fx-font-family: 'Roboto Medium';
+    -fx-background-color: #1abc9c;
+    -fx-text-fill: #ffffff;
+}
+
+.mfx-button-remove-settings {
+    -fx-font-size: 14px;
+    -fx-font-family: 'Roboto Medium';
+    -fx-background-color: #7f8c8d; /* Neutral gray */
+    -fx-text-fill: #ffffff;
+}
+
+/* Combo Box Styles */
+.mfx-combo-box {
+    -mfx-main: #1abc9c; /* Teal for consistent theme */
     -fx-font-size: 14;
     -fx-font-family: 'Visby Round CF Medium';
 }
 
-.mfx-text-field-details-error{
-    -mfx-main: #ff3e56;
+.mfx-combo-box-error {
+    -mfx-main: #e74c3c; /* Red for errors */
     -fx-font-size: 14;
     -fx-font-family: 'Visby Round CF Medium';
 }
 
-.mfx-button-update-settings{
-    -fx-font-size: 14px;
-    -fx-font-family: 'Roboto Medium';
-    -fx-background-color: #0984e3;
-    -fx-text-fill: #ffffff;
+/* Date Picker Styles */
+.mfx-dp-picker {
+    -mfx-main: #1abc9c;
+    -fx-font-size: 14;
+    -fx-font-family: 'Visby Round CF Medium';
 }
 
-.mfx-button-remove-settings{
-    -fx-font-size: 14px;
-    -fx-font-family: 'Roboto Medium';
-    -fx-background-color:  #2d3436;
-    -fx-text-fill: #ffffff;
+.mfx-dp-picker-error {
+    -mfx-main: #e74c3c; /* Red for errors */
+    -fx-font-size: 14;
+    -fx-font-family: 'Visby Round CF Medium';
+}
+
+/* Checkbox Styles */
+.mfx-checkbox {
+    -mfx-main: #1abc9c; /* Teal */
+}
+
+/* Text Field Styles */
+.mfx-text-field-details {
+    -mfx-main: #1abc9c;
+    -fx-font-size: 14;
+    -fx-font-family: 'Visby Round CF Medium';
+}
+
+.mfx-text-field-details-error {
+    -mfx-main: #e74c3c; /* Red for errors */
+    -fx-font-size: 14;
+    -fx-font-family: 'Visby Round CF Medium';
+}
+
+/* Hover and Active Effects */
+.mfx-button-add:hover {
+    -fx-background-color: #16a085; /* Darker teal on hover */
+}
+
+.mfx-button-remove:hover {
+    -fx-background-color: #c0392b; /* Darker red on hover */
+}
+
+.mfx-button-update:hover {
+    -fx-background-color: #2ecc71; /* Brighter green on hover */
+}
+
+.mfx-button-remove-settings:hover {
+    -fx-background-color: #95a5a6; /* Lighter gray on hover */
+}
+
+/* Global Styles for Borders */
+.mfx-button-add,
+.mfx-button-remove,
+.mfx-button-update {
+    -fx-border-radius: 5px;
+    -fx-border-color: transparent;
 }

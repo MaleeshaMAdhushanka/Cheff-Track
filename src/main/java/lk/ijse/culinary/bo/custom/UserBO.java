@@ -15,3 +15,4 @@ public interface UserBO extends SuperBO {
     boolean isUserExist(UserDto userDto);
     List<UserDto> getUsersWithOverdueBooks();
 }
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="StudentPane" prefHeight="680.0" prefWidth="804.0" stylesheets="@../assets/css/PageStyles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.culinary.controller.StudentFormController">
+   <children>
+      <Label layoutX="342.0" layoutY="39.0" prefHeight="42.0" prefWidth="148.0" styleClass="label-dashboard" stylesheets="@../assets/css/PageStyles.css" text="Student">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <MFXButton buttonType="RAISED" layoutX="667.0" layoutY="130.0" onAction="#btnAddOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-add" stylesheets="@../assets/css/PageStyles.css" text="Add">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </MFXButton>
+      <TableView fx:id="tblUser" focusTraversable="false" layoutX="27.0" layoutY="197.0" prefHeight="433.0" prefWidth="749.0" stylesheets="@../assets/css/TableStyle.css">
+         <columns>
+            <TableColumn fx:id="colName" prefWidth="96.0" style="-fx-alignment: center;" text="Name" />
+            <TableColumn fx:id="colEmail" prefWidth="136.0" style="-fx-alignment: center;" text="Email" />
+            <TableColumn fx:id="colAddress" prefWidth="128.0" style="-fx-alignment: center;" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="125.0" style="-fx-alignment: center;" text="Contact" />
+            <TableColumn fx:id="colDob" minWidth="0.0" prefWidth="125.0" style="-fx-alignment: center;" text="DOB" />
+            <TableColumn fx:id="colId" minWidth="0.0" prefWidth="125.0" style="-fx-alignment: center;" text="ID" />
+         </columns>
+      </TableView>
+      <MFXTextField fx:id="txtSearch" floatMode="DISABLED" floatingText="Search" layoutX="27.0" layoutY="130.0" prefHeight="45.0" prefWidth="175.0" promptText="Search" styleClass="mfx-text-field-details" stylesheets="@../assets/css/PageStyles.css" />
+      <MFXButton buttonType="RAISED" layoutX="238.0" layoutY="133.0" onAction="#btnSearchOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-add" stylesheets="@../assets/css/PageStyles.css" text="Search">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/search.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </MFXButton>
+      <MFXButton fx:id="btnRemove" buttonType="RAISED" layoutX="522.0" layoutY="133.0" onAction="#btnRemoveOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-add" stylesheets="@../assets/css/PageStyles.css" text="Remove">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </MFXButton>
+   </children>
+</AnchorPane>

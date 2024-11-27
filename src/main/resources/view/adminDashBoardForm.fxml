@@ -2,8 +2,6 @@
 
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -17,12 +15,12 @@
 
 <AnchorPane fx:id="dashBoardPane" prefHeight="680.0" prefWidth="804.0" stylesheets="@../assets/css/PageStyles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.culinary.controller.AdminDashBoardFormController">
    <children>
-      <Label layoutX="27.0" layoutY="52.0" styleClass="label-dashboard" stylesheets="@../assets/css/PageStyles.css" text="Dashboard">
+      <Label layoutX="230.0" layoutY="49.0" prefHeight="42.0" prefWidth="283.0" styleClass="label-dashboard" stylesheets="@../assets/css/PageStyles.css" text="       Dashboard">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Pane layoutX="28.0" layoutY="130.0" prefHeight="170.0" prefWidth="220.0" styleClass="pane-dashboard-cards" stylesheets="@../assets/css/DashBoardStyles.css">
+      <Pane layoutX="22.0" layoutY="91.0" prefHeight="170.0" prefWidth="220.0" styleClass="pane-dashboard-cards" stylesheets="@../assets/css/DashBoardStyles.css">
          <effect>
             <DropShadow blurType="GAUSSIAN" offsetX="-1.0" offsetY="2.0" spread="0.12">
                <color>
@@ -41,18 +39,18 @@
                   </ImageView>
                </children>
             </Group>
-            <Label layoutX="110.0" layoutY="31.0" styleClass="lbl-dashboard-card-title" text="Programs">
+            <Label layoutX="110.0" layoutY="31.0" styleClass="lbl-dashboard-card-title" text="Courses">
                <font>
                   <Font size="21.0" />
                </font>
             </Label>
-            <Label fx:id="lblBookCount" layoutX="155.0" layoutY="104.0" styleClass="lbl-dashboard-card-title" text="50">
+            <Label fx:id="lblCoursesCount" layoutX="62.0" layoutY="85.0" prefHeight="47.0" prefWidth="56.0" styleClass="lbl-dashboard-card-title" text="23">
                <font>
                   <Font size="32.0" />
                </font>
             </Label>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0984e3" height="48.0" layoutX="214.0" layoutY="102.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="6.0" />
-            <Group layoutX="19.0" layoutY="97.0">
+            <Group layoutX="-14.0" layoutY="127.0">
                <children>
                   <HBox layoutY="51.0" prefHeight="5.0" prefWidth="56.0" spacing="4.0">
                      <children>
@@ -89,7 +87,7 @@
                </children>
             </Group>
          </children></Pane>
-      <Pane layoutX="293.0" layoutY="130.0" prefHeight="170.0" prefWidth="220.0" styleClass="pane-dashboard-cards" stylesheets="@../assets/css/DashBoardStyles.css">
+      <Pane layoutX="242.0" layoutY="270.0" prefHeight="170.0" prefWidth="220.0" styleClass="pane-dashboard-cards" stylesheets="@../assets/css/DashBoardStyles.css">
          <effect>
             <DropShadow blurType="GAUSSIAN" offsetX="-1.0" offsetY="2.0" spread="0.12">
                <color>
@@ -98,7 +96,28 @@
             </DropShadow>
          </effect>
          <children>
-            <Group layoutX="21.0" layoutY="97.0">
+            <Group layoutX="54.0" layoutY="44.0">
+               <children>
+                  <Circle fill="#cde8ff" radius="28.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <ImageView fitHeight="32.0" fitWidth="33.0" layoutX="-16.0" layoutY="-16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/user.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Group>
+            <Label layoutX="110.0" layoutY="29.0" styleClass="lbl-dashboard-card-title" text="Students">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0984e3" height="48.0" layoutX="215.0" layoutY="102.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="6.0" />
+            <Label fx:id="lblStudentsCount" layoutX="82.0" layoutY="85.0" prefHeight="47.0" prefWidth="56.0" styleClass="lbl-dashboard-card-title" text="45">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <Group layoutX="-15.0" layoutY="119.0">
                <children>
                   <HBox layoutY="51.0" prefHeight="5.0" prefWidth="56.0" spacing="4.0">
                      <children>
@@ -134,30 +153,45 @@
                   </HBox>
                </children>
             </Group>
-            <Group layoutX="54.0" layoutY="44.0">
+            <Group layoutX="-5.0" layoutY="129.0">
                <children>
-                  <Circle fill="#cde8ff" radius="28.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-                  <ImageView fitHeight="32.0" fitWidth="33.0" layoutX="-16.0" layoutY="-16.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../assets/images/user.png" />
-                     </image>
-                  </ImageView>
+                  <HBox layoutY="51.0" prefHeight="5.0" prefWidth="56.0" spacing="4.0">
+                     <children>
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="-20.0" layoutY="21.0" prefHeight="6.0" prefWidth="24.0" rotate="90.0" spacing="4.0">
+                     <children>
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutY="30.0" prefHeight="6.0" prefWidth="24.0" rotate="90.0" spacing="4.0">
+                     <children>
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="40.0" prefHeight="6.0" prefWidth="24.0" spacing="4.0">
+                     <children>
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                     </children>
+                  </HBox>
                </children>
             </Group>
-            <Label layoutX="110.0" layoutY="29.0" styleClass="lbl-dashboard-card-title" text="Students">
-               <font>
-                  <Font size="21.0" />
-               </font>
-            </Label>
-            <Label fx:id="lblUserCount" layoutX="156.0" layoutY="104.0" styleClass="lbl-dashboard-card-title" text="50">
-               <font>
-                  <Font size="32.0" />
-               </font>
-            </Label>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0984e3" height="48.0" layoutX="215.0" layoutY="102.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="6.0" />
          </children>
       </Pane>
-      <Pane layoutX="557.0" layoutY="130.0" prefHeight="170.0" prefWidth="220.0" styleClass="pane-dashboard-card-gradiant" stylesheets="@../assets/css/DashBoardStyles.css">
+      <Pane layoutX="528.0" layoutY="403.0" prefHeight="170.0" prefWidth="220.0" styleClass="pane-dashboard-card-gradiant" stylesheets="@../assets/css/DashBoardStyles.css">
          <effect>
             <DropShadow blurType="GAUSSIAN" offsetX="-1.0" offsetY="2.0" spread="0.12">
                <color>
@@ -166,25 +200,73 @@
             </DropShadow>
          </effect>
          <children>
-            <Group layoutX="166.0" layoutY="82.0" rotate="90.0">
-               <children>
-                  <HBox layoutX="18.0" layoutY="13.0" prefHeight="6.0" prefWidth="24.0" spacing="4.0" />
-                  <Circle fill="#dadada" layoutX="8.0" layoutY="33.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
-               </children>
-            </Group>
-            <Label fx:id="lblDueBookCount" layoutX="38.0" layoutY="77.0" styleClass="lbl-dashboard-card-title-gradiant" text="50">
+            <Label fx:id="lblRegisterStudentCount" layoutX="38.0" layoutY="77.0" prefHeight="45.0" prefWidth="46.0" styleClass="lbl-dashboard-card-title-gradiant" text="50">
                <font>
                   <Font size="32.0" />
                </font>
             </Label>
-            <Label layoutX="3.0" layoutY="122.0" styleClass="lbl-dashboard-card-title-gradiant" text=" Users">
+            <Label layoutX="3.0" layoutY="122.0" styleClass="lbl-dashboard-card-title-gradiant" text="Registered Students">
                <font>
                   <Font size="21.0" />
                </font>
             </Label>
-            <HBox layoutX="156.0" layoutY="31.0" prefHeight="5.0" prefWidth="56.0" spacing="4.0">
+            <Group layoutX="-25.0" layoutY="127.0">
                <children>
-                  <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                  <HBox layoutY="51.0" prefHeight="5.0" prefWidth="56.0" spacing="4.0">
+                     <children>
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="-20.0" layoutY="21.0" prefHeight="6.0" prefWidth="24.0" rotate="90.0" spacing="4.0">
+                     <children>
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutY="30.0" prefHeight="6.0" prefWidth="24.0" rotate="90.0" spacing="4.0">
+                     <children>
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="40.0" prefHeight="6.0" prefWidth="24.0" spacing="4.0">
+                     <children>
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </Group>
+         </children>
+      </Pane>
+      <Group layoutX="720.0" layoutY="383.0">
+         <children>
+            <HBox layoutY="51.0" prefHeight="5.0" prefWidth="56.0" spacing="4.0" />
+            <HBox layoutX="-20.0" layoutY="21.0" prefHeight="6.0" prefWidth="24.0" rotate="90.0" spacing="4.0" />
+            <HBox layoutX="10.0" layoutY="40.0" prefHeight="6.0" prefWidth="24.0" spacing="4.0">
+               <children>
+                  <HBox prefHeight="6.0" prefWidth="24.0" spacing="4.0">
+                     <children>
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox layoutX="5.0" layoutY="-1.0" prefHeight="6.0" prefWidth="24.0" spacing="4.0">
+               <children>
                   <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
                   <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
                   <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
@@ -192,7 +274,7 @@
                   <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
                </children>
             </HBox>
-            <HBox layoutX="156.0" layoutY="49.0" prefHeight="5.0" prefWidth="56.0" spacing="4.0">
+            <HBox layoutX="6.0" layoutY="26.0" prefHeight="6.0" prefWidth="24.0" spacing="4.0">
                <children>
                   <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
                   <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
@@ -201,38 +283,16 @@
                   <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
                </children>
             </HBox>
-            <HBox layoutX="151.0" layoutY="102.0" prefHeight="6.0" prefWidth="24.0" spacing="4.0" />
-            <HBox layoutX="156.0" layoutY="63.0" prefHeight="5.0" prefWidth="56.0" spacing="4.0">
+            <HBox layoutX="7.0" layoutY="11.0" prefHeight="6.0" prefWidth="24.0" spacing="4.0">
                <children>
                   <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
                   <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
-                  <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
-                  <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
-               </children>
-            </HBox>
-            <HBox layoutX="156.0" layoutY="82.0" prefHeight="5.0" prefWidth="56.0" spacing="4.0">
-               <children>
                   <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
                   <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
                   <Circle fill="#dadada" radius="3.0" stroke="#e4e0e0" strokeType="INSIDE" strokeWidth="0.0" />
                </children>
             </HBox>
          </children>
-      </Pane>
-      <TableView fx:id="tblStudentCourses" focusTraversable="false" layoutX="28.0" layoutY="359.0" prefHeight="287.0" prefWidth="749.0" stylesheets="@../assets/css/TableStyle.css">
-         <columns>
-            <TableColumn fx:id="colID" prefWidth="79.0" style="-fx-alignment: center;" text="ID" />
-            <TableColumn fx:id="colName" prefWidth="135.0" style="-fx-alignment: center;" text="Name" />
-            <TableColumn fx:id="colCourseName" prefWidth="108.0" style="-fx-alignment: center;" text="Course Name" />
-            <TableColumn fx:id="colRegisteredDate" prefWidth="146.0" style="-fx-alignment: center;" text="Registered Date" />
-            <TableColumn fx:id="colDuration" prefWidth="135.0" style="-fx-alignment: center;" text="Duration" />
-            <TableColumn fx:id="colRestPayAmount" prefWidth="145.0" style="-fx-alignment: center;" text="Rest pay Amount" />
-         </columns>
-      </TableView>
-      <Label layoutX="28.0" layoutY="318.0" styleClass="label-dashboard" stylesheets="@../assets/css/PageStyles.css" text="Student Courses">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
+      </Group>
    </children>
 </AnchorPane>

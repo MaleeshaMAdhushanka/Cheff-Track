@@ -24,9 +24,9 @@ public class SessionFactoryConfig {
                 .mergeProperties(Utility.getProperties())
                 .addAnnotatedClass(Admin.class)
                 .addAnnotatedClass(Payment.class)
-                .addAnnotatedClass(Program.class)
+                .addAnnotatedClass(Course.class)
                 .addAnnotatedClass(Student.class)
-                .addAnnotatedClass(Student_Program.class)
+                .addAnnotatedClass(StudentCourse.class)
                 .addAnnotatedClass(User.class)
                 .buildSessionFactory();
     }

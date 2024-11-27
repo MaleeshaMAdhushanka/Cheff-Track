@@ -6,27 +6,33 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
 @Entity
 @Table(name = "user")
 public class User {
-   @Id
-   @Column(name =  "email", length = 30)
-   private String email;
 
-   @Column(name = "name")
-   private String name;
+    @Id
+    @Column(name = "email",length = 30)
+    private String email;
 
 
-   @Column(name = "address")
-   private String address;
+    @Column(name = "name")
+    private String name;
 
-   @Column(name = "password")
+    @Column(name = "address")
+    private String address;
+
+
+    @Column(name = "password")
     private String password;
 
-   private String imgUrl;
 
-   public User(){}
+    private String imgUrl;
+
+
+
+
+    public User() {
+    }
 
     public User(String email, String name, String address, String password, String imgUrl) {
         this.email = email;
@@ -76,6 +82,8 @@ public class User {
         this.imgUrl = imgUrl;
     }
 
+
+
     @Override
     public String toString() {
         return "User{" +
@@ -87,3 +95,4 @@ public class User {
                 '}';
     }
 }
+

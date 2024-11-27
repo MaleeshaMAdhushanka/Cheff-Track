@@ -4,9 +4,10 @@ import javafx.scene.shape.Circle;
 import lk.ijse.culinary.bo.custom.AdminBO;
 import lk.ijse.culinary.dao.DAOFactory;
 import lk.ijse.culinary.dao.custom.AdminDAO;
-import lk.ijse.culinary.dao.custom.impl.AdminDAOImpl;
 import lk.ijse.culinary.dto.AdminDto;
 import lk.ijse.culinary.entity.Admin;
+import lk.ijse.culinary.util.PasswordEncrypt;
+import lk.ijse.culinary.util.PasswordVerifier;
 import lk.ijse.culinary.util.SessionFactoryConfig;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -16,20 +17,20 @@ import java.util.List;
 
 public class AdminBOImpl implements AdminBO {
 
+
     public static Admin loggedAdmin;
 
     public static Circle circleImg;
 
     private Session session;
 
-    AdminDAO adminDAO = DAOFactory.getInstance().getDAO(DAOFactory.DAOTypes.ADMIN);
+    AdminDAO adminDAO = (AdminDAO) DAOFactory.getInstance().getDAO(DAOFactory.DAOTypes.ADMIN);
+
 
     @Override
     public List<AdminDto> getAllAdmin() {
         session = SessionFactoryConfig.getInstance().getSession();
-        if (adminDAO instanceof AdminDAOImpl) {
-            ((AdminDAOImpl) adminDAO).setSession(session);
-        }
+        adminDAO.setSession(session);
         List<AdminDto> adminList = new ArrayList<>();
         try {
             for (Admin admin : adminDAO.getAll()) {
@@ -45,15 +46,15 @@ public class AdminBOImpl implements AdminBO {
         return adminList;
     }
 
+
     @Override
     public boolean saveAdmin(AdminDto dto) {
         session = SessionFactoryConfig.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         try {
-            if (adminDAO instanceof AdminDAOImpl) {
-                ((AdminDAOImpl) adminDAO).setSession(session);
-            }
-            adminDAO.save(new Admin(dto.getUsername(), dto.getPassword(), dto.getImgUrl()));
+            adminDAO.setSession(session);
+            String hashedPassword = PasswordEncrypt.hashPassword(dto.getPassword());
+            adminDAO.save(new Admin(dto.getUsername(), hashedPassword, dto.getImgUrl()));
             transaction.commit();
             return true;
         } catch (Exception e) {
@@ -69,9 +70,7 @@ public class AdminBOImpl implements AdminBO {
         session = SessionFactoryConfig.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         try {
-            if (adminDAO instanceof AdminDAOImpl) {
-                ((AdminDAOImpl) adminDAO).setSession(session);
-            }
+            adminDAO.setSession(session);
             Admin admin = adminDAO.search(AdminBOImpl.loggedAdmin.getUsername());
             session.clear();
             if (!(admin.getUsername().equals(dto.getUsername()))) {
@@ -96,9 +95,7 @@ public class AdminBOImpl implements AdminBO {
         session = SessionFactoryConfig.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         try {
-            if (adminDAO instanceof AdminDAOImpl) {
-                ((AdminDAOImpl) adminDAO).setSession(session);
-            }
+            adminDAO.setSession(session);
             Admin admin = adminDAO.search(id);
             adminDAO.delete(admin);
             transaction.commit();
@@ -111,15 +108,15 @@ public class AdminBOImpl implements AdminBO {
         }
     }
 
+
+    @Override
     public boolean isAdminExist(AdminDto dto) {
         session = SessionFactoryConfig.getInstance().getSession();
-        if (adminDAO instanceof AdminDAOImpl) {
-            ((AdminDAOImpl) adminDAO).setSession(session);
-        }
+        adminDAO.setSession(session);
         try {
             Admin search = adminDAO.search(dto.getUsername());
             if (search != null) {
-                if (search.getPassword().equals(dto.getPassword())) {
+                if (PasswordVerifier.verifyPassword(dto.getPassword(), search.getPassword())) {
                     loggedAdmin = search;
                     return true;
                 }
@@ -130,5 +127,6 @@ public class AdminBOImpl implements AdminBO {
             session.close();
         }
         return false;
+
     }
 }

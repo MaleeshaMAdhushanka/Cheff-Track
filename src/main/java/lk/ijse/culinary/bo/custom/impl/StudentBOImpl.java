@@ -3,6 +3,7 @@ package lk.ijse.culinary.bo.custom.impl;
 import lk.ijse.culinary.bo.custom.StudentBO;
 import lk.ijse.culinary.dao.DAOFactory;
 import lk.ijse.culinary.dao.custom.StudentDAO;
+import lk.ijse.culinary.dto.StudentCourseDto;
 import lk.ijse.culinary.dto.StudentDto;
 import lk.ijse.culinary.entity.Student;
 import lk.ijse.culinary.util.SessionFactoryConfig;
@@ -14,9 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StudentBOImpl implements StudentBO {
-
     private Session session;
-
     StudentDAO studentDAO = (StudentDAO) DAOFactory.getInstance().getDAO(DAOFactory.DAOTypes.STUDENT);
 
     @Override
@@ -137,5 +136,49 @@ public class StudentBOImpl implements StudentBO {
         return null;
     }
 
+    // New methods
+    @Override
+    public List<String> getAllStudentEmails() {
+        session = SessionFactoryConfig.getInstance().getSession();
+        studentDAO.setSession(session);
+        List<String> studentEmails = studentDAO.getAllStudentEmails();
+        session.close();
+        return studentEmails;
+    }
 
+    @Override
+    public List<String> getAllCourseIDs() {
+        session = SessionFactoryConfig.getInstance().getSession();
+        studentDAO.setSession(session);
+        List<String> courseIDs = studentDAO.getAllCourseIDs();
+        session.close();
+        return courseIDs;
+    }
+
+    @Override
+    public int getStudentCount() {
+        session = SessionFactoryConfig.getInstance().getSession();
+        studentDAO.setSession(session);
+        int count = studentDAO.getStudentCount();
+        session.close();
+        return count;
+    }
+
+    @Override
+    public int getRegisteredStudentCount() {
+        session = SessionFactoryConfig.getInstance().getSession();
+        studentDAO.setSession(session);
+        int count = studentDAO.getRegisteredStudentCount();
+        session.close();
+        return count;
+    }
+
+    @Override
+    public List<StudentCourseDto> getAllStudentCourses() {
+        session = SessionFactoryConfig.getInstance().getSession();
+        studentDAO.setSession(session);
+        List<StudentCourseDto> studentCourses = studentDAO.getAllStudentCourses();
+        session.close();
+        return studentCourses;
+    }
 }

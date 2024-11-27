@@ -10,50 +10,50 @@
 
 <AnchorPane prefHeight="550.0" prefWidth="653.0" styleClass="pane" stylesheets="@../assets/css/PopUpStyles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.culinary.controller.StudentDataFormController">
    <children>
-      <Label fx:id="lblAction" layoutX="45.0" layoutY="44.0" styleClass="label-title" text="Add Student">
+      <Label fx:id="lblAction" layoutX="192.0" layoutY="11.0" styleClass="label-title" text="Add Student">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Label layoutX="45.0" layoutY="135.0" styleClass="label-properties" text="Email">
+      <Label layoutX="354.0" layoutY="111.0" styleClass="label-properties" text="Email">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <Label layoutX="45.0" layoutY="207.0" styleClass="label-properties" text="Name">
+      <Label layoutX="44.0" layoutY="111.0" styleClass="label-properties" text="Name">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <Label layoutX="35.0" layoutY="284.0" styleClass="label-properties" text="Address">
+      <Label layoutX="34.0" layoutY="200.0" styleClass="label-properties" text="Address">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <Label layoutX="45.0" layoutY="362.0" styleClass="label-properties" text="Course">
+      <Label layoutX="34.0" layoutY="284.0" styleClass="label-properties" text="Course">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <MFXTextField fx:id="txtEmail" floatMode="DISABLED" layoutX="116.0" layoutY="135.0" prefHeight="45.0" prefWidth="197.0" styleClass="mfx-text-field" stylesheets="@../../../../../Downloads/Hibernate-project-main/src/main/resources/assets/css/PopUpStyles.css" />
-      <MFXTextField fx:id="txtName" floatMode="DISABLED" layoutX="116.0" layoutY="198.0" prefHeight="45.0" prefWidth="197.0" styleClass="mfx-text-field" stylesheets="@../../../../../Downloads/Hibernate-project-main/src/main/resources/assets/css/PopUpStyles.css" />
-      <MFXTextField fx:id="txtAddress" floatMode="DISABLED" layoutX="116.0" layoutY="273.0" prefHeight="45.0" prefWidth="197.0" styleClass="mfx-text-field" stylesheets="@../../../../../Downloads/Hibernate-project-main/src/main/resources/assets/css/PopUpStyles.css" />
-      <MFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="87.0" layoutY="467.0" onAction="#btnAddOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-add" stylesheets="@../../../../../Downloads/Hibernate-project-main/src/main/resources/assets/css/PopUpStyles.css" text="Add" />
-      <MFXButton fx:id="btnCancel" buttonType="RAISED" layoutX="244.0" layoutY="467.0" onAction="#btnCancelOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-cancel" stylesheets="@../../../../../Downloads/Hibernate-project-main/src/main/resources/assets/css/PopUpStyles.css" text="Cancel" />
-      <MFXComboBox fx:id="cmbCourse" layoutX="116.0" layoutY="342.0" onAction="#cmbCourseOnAction" prefHeight="45.0" prefWidth="197.0" />
-      <MFXDatePicker fx:id="dateofbirth" layoutX="398.0" layoutY="140.0" />
-      <Label layoutX="398.0" layoutY="111.0" styleClass="label-properties" text="Date Of Birth">
+      <MFXTextField fx:id="txtEmail" floatMode="DISABLED" layoutX="431.0" layoutY="100.0" prefHeight="45.0" prefWidth="197.0" styleClass="mfx-text-field" stylesheets="@../assets/css/PopUpStyles.css" />
+      <MFXTextField fx:id="txtName" floatMode="DISABLED" layoutX="116.0" layoutY="100.0" prefHeight="45.0" prefWidth="197.0" styleClass="mfx-text-field" stylesheets="@../assets/css/PopUpStyles.css" />
+      <MFXTextField fx:id="txtAddress" floatMode="DISABLED" layoutX="116.0" layoutY="189.0" prefHeight="45.0" prefWidth="197.0" styleClass="mfx-text-field" stylesheets="@../assets/css/PopUpStyles.css" />
+      <MFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="175.0" layoutY="403.0" onAction="#btnAddOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-add" stylesheets="@../assets/css/PopUpStyles.css" text="Add" />
+      <MFXButton fx:id="btnCancel" buttonType="RAISED" layoutX="368.0" layoutY="403.0" onAction="#btnCancelOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-cancel" stylesheets="@../assets/css/PopUpStyles.css" text="Cancel" />
+      <MFXComboBox fx:id="cmbCourse" layoutX="116.0" layoutY="273.0" onAction="#cmbCourseOnAction" prefHeight="45.0" prefWidth="197.0" />
+      <MFXDatePicker fx:id="dateofbirth" layoutX="464.0" layoutY="193.0" prefHeight="38.0" prefWidth="157.0" />
+      <Label layoutX="323.0" layoutY="200.0" styleClass="label-properties" text="Date Of Birth">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <MFXTextField fx:id="contact" floatMode="DISABLED" layoutX="400.0" layoutY="243.0" prefHeight="45.0" prefWidth="197.0" styleClass="mfx-text-field" stylesheets="@../../../../../Downloads/Hibernate-project-main/src/main/resources/assets/css/PopUpStyles.css" />
-      <Label layoutX="398.0" layoutY="209.0" styleClass="label-properties" text="Contact">
+      <MFXTextField fx:id="contact" floatMode="DISABLED" layoutX="444.0" layoutY="261.0" prefHeight="45.0" prefWidth="197.0" styleClass="mfx-text-field" stylesheets="@../assets/css/PopUpStyles.css" />
+      <Label layoutX="334.0" layoutY="272.0" styleClass="label-properties" text="Contact">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <Label layoutX="398.0" layoutY="20.0" styleClass="label-properties" text="Student ID:">
+      <Label layoutX="405.0" layoutY="41.0" styleClass="label-properties" text="Student ID:">
          <font>
             <Font size="19.0" />
          </font>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="680.0" prefWidth="804.0" stylesheets="@../assets/css/PageStyles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.culinary.controller.CoursePaymentFormController">
+   <children>
+      <Label layoutX="325.0" layoutY="25.0" styleClass="label-dashboard" stylesheets="@../assets/css/PageStyles.css" text="Course Payment">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <MFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="606.0" layoutY="100.0" onAction="#btnAddOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-add" text="Add" />
+      <TableView fx:id="tblPayment" focusTraversable="false" layoutX="22.0" layoutY="207.0" prefHeight="433.0" prefWidth="764.0" stylesheets="@../assets/css/TableStyle.css">
+         <columns>
+            <TableColumn fx:id="colID" style="-fx-alignment: center;" text="PaymentID" />
+            <TableColumn fx:id="colUpFrontpay" prefWidth="129.0" style="-fx-alignment: center;" text="Balance Payment" />
+            <TableColumn fx:id="ColBalancePay" prefWidth="125.0" style="-fx-alignment: center;" text="UpFront Payment" />
+            <TableColumn fx:id="ColCourseID" style="-fx-alignment: center;" text="CourseID" />
+            <TableColumn fx:id="ColStudentEmail" minWidth="0.0" prefWidth="105.0" style="-fx-alignment: center;" text="Student Email" />
+            <TableColumn fx:id="colStatus" minWidth="0.0" prefWidth="78.0" style="-fx-alignment: center;" text="Status" />
+            <TableColumn fx:id="ColStudentCourseID" minWidth="0.0" prefWidth="98.6666259765625" style="-fx-alignment: center;" text="St_Cou_ID" />
+            <TableColumn fx:id="colRemove" minWidth="0.0" prefWidth="64.66668701171875" style="-fx-alignment: center;" text="Remove" />
+         </columns>
+      </TableView>
+      <MFXTextField fx:id="txtSearch" floatMode="DISABLED" floatingText="Search" layoutX="32.0" layoutY="97.0" prefHeight="45.0" prefWidth="175.0" promptText="Search" styleClass="mfx-text-field-details" />
+      <MFXButton fx:id="btnSearch" buttonType="RAISED" layoutX="236.0" layoutY="99.0" onAction="#btnSearchOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-add" stylesheets="@../assets/css/PageStyles.css" text="Search">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/search.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </MFXButton>
+      <ImageView fitHeight="18.0" fitWidth="27.0" layoutX="622.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/add.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

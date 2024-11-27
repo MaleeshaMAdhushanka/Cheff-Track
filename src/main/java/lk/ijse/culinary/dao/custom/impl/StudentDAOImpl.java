@@ -1,6 +1,7 @@
 package lk.ijse.culinary.dao.custom.impl;
 
 import lk.ijse.culinary.dao.custom.StudentDAO;
+import lk.ijse.culinary.dto.StudentCourseDto;
 import lk.ijse.culinary.entity.Student;
 import lk.ijse.culinary.util.SessionFactoryConfig;
 import org.hibernate.Session;
@@ -14,18 +15,26 @@ public class StudentDAOImpl implements StudentDAO {
     private Session session;
 
     @Override
+    public List<String> getAllStudentEmails() {
+        String hql = "SELECT email FROM Student";
+        Query<String> query = session.createQuery(hql, String.class);
+        return query.list();
+    }
+
+    @Override
+    public List<String> getAllCourseIDs() {
+        String hql = "SELECT courseID FROM Course";
+        Query<String> query = session.createQuery(hql, String.class);
+        return query.list();
+    }
+
+    @Override
     public void setSession(Session session) {
-        if (session == null || !session.isOpen()) {
-            throw new IllegalStateException("Cannot set a null or closed session.");
-        }
         this.session = session;
     }
 
     @Override
     public List<Student> getAll() {
-        if (session == null || !session.isOpen()) {
-            throw new IllegalStateException("Session is not available or already closed.");
-        }
         String hql = "FROM Student";
         Query<Student> query = session.createQuery(hql, Student.class);
         return query.list();
@@ -33,33 +42,21 @@ public class StudentDAOImpl implements StudentDAO {
 
     @Override
     public void save(Student entity) {
-        if (session == null || !session.isOpen()) {
-            throw new IllegalStateException("Session is not available or already closed.");
-        }
         session.save(entity);
     }
 
     @Override
     public void update(Student entity) {
-        if (session == null || !session.isOpen()) {
-            throw new IllegalStateException("Session is not available or already closed.");
-        }
         session.update(entity);
     }
 
     @Override
     public void delete(Student entity) {
-        if (session == null || !session.isOpen()) {
-            throw new IllegalStateException("Session is not available or already closed.");
-        }
         session.delete(entity);
     }
 
     @Override
     public Student search(String id) {
-        if (session == null || !session.isOpen()) {
-            throw new IllegalStateException("Session is not available or already closed.");
-        }
         return session.get(Student.class, id);
     }
 
@@ -75,13 +72,10 @@ public class StudentDAOImpl implements StudentDAO {
             if (item != null) {
                 String itemCode = item.toString();
 
-
                 if (itemCode.startsWith("S") && itemCode.length() > 1) {
-
                     int idNum = Integer.parseInt(itemCode.substring(1));
                     nextId = "S" + String.format("%03d", ++idNum);
                 } else {
-
                     nextId = "S001";
                 }
             } else {
@@ -104,9 +98,8 @@ public class StudentDAOImpl implements StudentDAO {
         return null;
     }
 
-
     @Override
-    public Student searchStudentByContact(String id) {
+    public Student searchByContact(String id) {
         return null;
     }
 
@@ -115,4 +108,33 @@ public class StudentDAOImpl implements StudentDAO {
         return null;
     }
 
+    @Override
+    public Student findByEmail(String studentEmail) {
+        String hql = "FROM Student WHERE email = :email";
+        return session.createQuery(hql, Student.class)
+                .setParameter("email", studentEmail)
+                .uniqueResult();
+    }
+
+    @Override
+    public int getStudentCount() {
+        String hql = "SELECT COUNT(*) FROM Student";
+        Query<Long> query = session.createQuery(hql, Long.class);
+        return query.uniqueResult().intValue();
+    }
+
+    @Override
+    public int getRegisteredStudentCount() {
+        String hql = "SELECT COUNT(*) FROM Student WHERE registered = true";
+        Query<Long> query = session.createQuery(hql, Long.class);
+        return query.uniqueResult().intValue();
+    }
+
+    @Override
+    public List<StudentCourseDto> getAllStudentCourses() {
+        String hql = "SELECT new lk.ijse.culinary.dto.StudentCourseDto(s.id, s.name, c.courseName, c.duration, sc.registeredDate, sc.restPayAmount) " +
+                "FROM StudentCourse sc JOIN sc.student s JOIN sc.course c";
+        Query<StudentCourseDto> query = session.createQuery(hql, StudentCourseDto.class);
+        return query.list();
+    }
 }

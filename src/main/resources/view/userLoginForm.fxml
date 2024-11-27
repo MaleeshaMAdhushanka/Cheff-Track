@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginPane" prefHeight="630.0" prefWidth="482.0" styleClass="pane" stylesheets="@../assets/css/LoginPageStyles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.culinary.controller.UserLoginFormController">
+   <children>
+      <Label layoutX="330.0" layoutY="22.0" styleClass="label-hostel" text="Cheff">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="403.0" layoutY="22.0" styleClass="label-d24" text="Track">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="136.0" layoutY="139.0" styleClass="label-welcome" text="Welcome">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Label layoutX="176.0" layoutY="219.0" styleClass="label-loginWithUsername" text="Login with Username">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <MFXTextField fx:id="txtEmail" floatMode="BORDER" floatingText="Email" layoutX="115.0" layoutY="267.0" prefHeight="55.0" prefWidth="270.0" styleClass="mfx-text-field" />
+      <MFXPasswordField fx:id="txtPassword" floatMode="BORDER" floatingText="Password" layoutX="115.0" layoutY="351.0" onAction="#txtPasswordOnAction" prefHeight="55.0" prefWidth="270.0" styleClass="mfx-text-field" />
+      <MFXButton layoutX="195.0" layoutY="439.0" onAction="#btnLogin" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-login" text="LOGIN" />
+      <Line endX="125.0" layoutX="114.0" layoutY="513.0" startX="44.0" strokeWidth="0.4" />
+      <Line endX="125.0" layoutX="219.0" layoutY="513.0" startX="44.0" strokeWidth="0.4" />
+      <Label layoutX="240.0" layoutY="503.0" styleClass="label-or" text="OR">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="136.0" layoutY="533.0" styleClass="label-dontHaveAccount" text="Don't have account?">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="274.0" layoutY="533.0" onMouseClicked="#btnRegister" styleClass="label-register" text="Register Now">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="203.0" layoutY="570.0" onMouseClicked="#btnAdminLogin" styleClass="label-register" text="Admin Portal">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblError" layoutX="115.0" layoutY="408.0" styleClass="label-error" text="Check username or password." visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

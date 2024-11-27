@@ -1,10 +1,9 @@
+// PaymentDAOImpl.java
 package lk.ijse.culinary.dao.custom.impl;
 
 import lk.ijse.culinary.dao.custom.PaymentDAO;
 import lk.ijse.culinary.entity.Payment;
-import lk.ijse.culinary.util.SessionFactoryConfig;
 import org.hibernate.Session;
-import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import java.util.List;
@@ -12,29 +11,24 @@ import java.util.List;
 public class PaymentDAOImpl implements PaymentDAO {
     private Session session;
 
-
     @Override
-    public List<Payment> getAll() {
-        String hql = "FROM Payment";
-        Query<Payment> query = session.createQuery(hql, Payment.class);
-        return query.list();
-
+    public void setSession(Session session) {
+        this.session = session;
     }
 
     @Override
     public void save(Payment entity) {
         session.save(entity);
     }
+
     @Override
     public void update(Payment entity) {
         session.update(entity);
-
     }
 
     @Override
     public void delete(Payment entity) {
         session.delete(entity);
-
     }
 
     @Override
@@ -43,8 +37,22 @@ public class PaymentDAOImpl implements PaymentDAO {
     }
 
     @Override
+    public List<Payment> getAll() {
+        return session.createQuery("FROM Payment", Payment.class).list();
+    }
+
+    @Override
     public String generateNextId() {
-        return null;
+        String hql = "SELECT p.payment_ID FROM Payment p ORDER BY p.payment_ID DESC";
+        Query<String> query = session.createQuery(hql, String.class);
+        query.setMaxResults(1);
+        String lastId = query.uniqueResult();
+        if (lastId != null) {
+            int nextId = Integer.parseInt(lastId.substring(1)) + 1;
+            return "P" + String.format("%03d", nextId);
+        } else {
+            return "P001";
+        }
     }
 
     @Override
@@ -53,30 +61,16 @@ public class PaymentDAOImpl implements PaymentDAO {
     }
 
     @Override
-    public void setSession(Session session) {
-        this.session = session;
+    public String getCurrentId() throws Exception {
+        return null;
     }
 
-
     @Override
-    public String getCurrentId() throws Exception {
-        Session session = SessionFactoryConfig.getInstance().getSession();
-        Transaction transaction = session.beginTransaction();
-        String nextId = "";
-        Object payment = session.createQuery
-                ("SELECT P.paymentID FROM Payment P  ORDER BY P.paymentID DESC LIMIT 1").uniqueResult();
-        if (payment != null) {
-            String userId = payment.toString();
-            String prefix = "P";
-            String[] split = userId.split(prefix);
-            int idNum = Integer.parseInt(split[1]);
-            nextId = prefix + String.format("%03d", ++idNum);
-
-        } else {
-            return "P001";
-        }
-        transaction.commit();
-        session.close();
-        return nextId;
+    public List<Payment> searchByStudentAndCourse(String studentEmail, String courseID) {
+        String hql = "FROM Payment WHERE studentEmail = :studentEmail AND courseID = :courseID";
+        Query<Payment> query = session.createQuery(hql, Payment.class);
+        query.setParameter("studentEmail", studentEmail);
+        query.setParameter("courseID", courseID);
+        return query.list();
     }
 }

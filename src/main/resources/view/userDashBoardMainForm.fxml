@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="680.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.culinary.controller.UserDashBoardMainFormController">
+   <children>
+      <AnchorPane prefHeight="680.0" prefWidth="220.0" styleClass="pane" stylesheets="@../assets/css/DashBoardStyles.css">
+         <children>
+            <VBox layoutY="119.0" prefHeight="369.0" prefWidth="190.0" spacing="10.0">
+               <children>
+                  <MFXButton fx:id="btnDashboard" alignment="BASELINE_LEFT" onAction="#btnDashboardOnAction" prefHeight="51.0" prefWidth="197.0" styleClass="mfx-button-Dashboard" text="Dashboard">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/images/dashboard-gray.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="35.0" />
+                     </padding>
+                  </MFXButton>
+                  <MFXButton fx:id="btnRegisterStudent" alignment="BASELINE_LEFT" onAction="#btnRegisterStudentOnAction" prefHeight="51.0" prefWidth="197.0" styleClass="mfx-button-BookHistory" text="Register">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/images/borrowBooks-gray.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="35.0" />
+                     </padding>
+                  </MFXButton>
+                  <MFXButton fx:id="btnSetting" alignment="BASELINE_LEFT" onAction="#btnSettingsOnAction" prefHeight="51.0" prefWidth="197.0" styleClass="mfx-button-Settings" text="Settings">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/images/setting-gray.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="35.0" />
+                     </padding>
+                  </MFXButton>
+                  <MFXButton fx:id="btnPayment" alignment="BASELINE_LEFT" onAction="#btnPaymentsOnAction" prefHeight="51.0" prefWidth="197.0" styleClass="mfx-button-BorrowBooks" text="Payments">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/images/borrowBooks-gray.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="35.0" />
+                     </padding>
+                  </MFXButton>
+               </children>
+            </VBox>
+            <Label layoutX="49.0" layoutY="44.0" styleClass="label-hostel" text="Cheff">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="134.0" layoutY="44.0" styleClass="label-d24" text="Track">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <MFXButton alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="580.0" onAction="#btnLogoutOnAction" prefHeight="51.0" prefWidth="201.0" styleClass="mfx-button-Logout" text="Logout">
+               <graphic>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/logout-gray.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="35.0" />
+               </padding>
+            </MFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="holderPane" layoutX="221.0" prefHeight="680.0" prefWidth="804.0" />
+      <Pane fx:id="imgAndNameHolderPane" layoutX="814.0" layoutY="44.0" prefHeight="65.0" prefWidth="210.0" styleClass="pane-admin-details" stylesheets="@../assets/css/DashBoardStyles.css">
+         <children>
+            <Circle fx:id="cirUserImage" fill="WHITE" layoutX="44.0" layoutY="33.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label fx:id="idUserName" layoutX="94.0" layoutY="20.0" text="John Doe" />
+         </children>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" offsetX="-1.0" offsetY="2.0" spread="0.12">
+               <color>
+                  <Color opacity="0.20000000298023224" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>

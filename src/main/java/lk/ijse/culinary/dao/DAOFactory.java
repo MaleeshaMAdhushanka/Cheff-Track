@@ -6,32 +6,35 @@ public class DAOFactory {
 
     private static DAOFactory daoFactory;
 
-    private DAOFactory() {}
+    private DAOFactory() {
+    }
 
     public static DAOFactory getInstance() {
-        return daoFactory == null ? daoFactory = new DAOFactory() : daoFactory;
+        return daoFactory == null ? new DAOFactory() : daoFactory;
     }
 
-    public enum  DAOTypes {
-        User, ADMIN, STUDENT, PROGRAM, PAYMENT, STUDENT_PROGRAM
+    public enum DAOTypes {
+        USER,ADMIN,STUDENT,COURSE,PAYMENT,STUDENT_COURSE
     }
 
-    public StudentDAOImpl getDAO(DAOTypes types) {
-        switch (types){
-            case User:
-                return new UserDAOImpl();
+    public SuperDAO  getDAO(DAOTypes types) {
+        switch (types) {
+            case USER:
+                return  new UserDAOImpl();
             case ADMIN:
                 return new AdminDAOImpl();
             case STUDENT:
                 return new StudentDAOImpl();
-            case PROGRAM:
-                return new ProgramDAOImpl();
+            case COURSE:
+                return new CourseDAOImpl();
             case PAYMENT:
                 return new PaymentDAOImpl();
-            case STUDENT_PROGRAM:
-                return new StudentProgramDAOImpl();
+            case STUDENT_COURSE:
+                return new StudentCourseDAOImpl();
             default:
                 return null;
         }
     }
+
+}
 

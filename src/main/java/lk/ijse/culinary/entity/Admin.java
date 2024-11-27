@@ -11,13 +11,15 @@ import javax.persistence.Table;
 public class Admin {
 
     @Id
-    @Column(name = "username", length = 30)
+    @Column(name = "username",length = 30)
     private String username;
 
     @Column(name = "password")
     private String password;
 
     private String imgUrl;
+
+
 
 
     public Admin() {
@@ -52,4 +54,6 @@ public class Admin {
     public void setImgUrl(String imgUrl) {
         this.imgUrl = imgUrl;
     }
+
 }
+

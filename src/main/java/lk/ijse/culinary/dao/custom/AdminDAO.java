@@ -5,5 +5,6 @@ import lk.ijse.culinary.entity.Admin;
 
 public interface AdminDAO extends CrudDAO<Admin> {
 
-    int updateAdminUsername(String userName, String oldUserName);
+    int updateAdminUsername(String userName,String oldUsername);
+
 }

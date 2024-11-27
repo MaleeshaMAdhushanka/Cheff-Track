@@ -1,17 +1,22 @@
 package lk.ijse.culinary.dto;
 
+import lk.ijse.culinary.entity.Admin;
+
 public class AdminDto {
+
     private String username;
 
     private String password;
 
     private String imgUrl;
 
-    public AdminDto() {}
 
-    public AdminDto(String password, String username) {
-        this.password = password;
+    public AdminDto() {
+    }
+
+    public AdminDto(String username, String password) {
         this.username = username;
+        this.password = password;
     }
 
     public AdminDto(String username, String password, String imgUrl) {
@@ -43,4 +48,11 @@ public class AdminDto {
     public void setImgUrl(String imgUrl) {
         this.imgUrl = imgUrl;
     }
+
+    public Admin getEntity(){
+        return new Admin(this.username,this.password,this.imgUrl);
+    }
+
+
 }
+

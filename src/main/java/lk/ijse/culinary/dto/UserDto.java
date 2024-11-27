@@ -1,5 +1,7 @@
 package lk.ijse.culinary.dto;
 
+
+
 public class UserDto {
 
     private String email;
@@ -10,18 +12,8 @@ public class UserDto {
 
     private String imgUrl;
 
-    public UserDto() {}
 
-    public UserDto(String password, String email) {
-        this.password = password;
-        this.email = email;
-    }
-
-    public UserDto(String email, String name, String address, String password) {
-        this.email = email;
-        this.name = name;
-        this.address = address;
-        this.password = password;
+    public UserDto() {
     }
 
     public UserDto(String email, String name, String address, String password, String imgUrl) {
@@ -32,6 +24,18 @@ public class UserDto {
         this.imgUrl = imgUrl;
     }
 
+
+    public UserDto(String email, String password) {
+        this.email = email;
+        this.password = password;
+    }
+
+    public UserDto(String email, String name, String address, String password) {
+        this.email = email;
+        this.name = name;
+        this.address = address;
+        this.password = password;
+    }
     public String getEmail() {
         return email;
     }
@@ -83,3 +87,4 @@ public class UserDto {
                 '}';
     }
 }
+
