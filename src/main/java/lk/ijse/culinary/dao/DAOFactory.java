@@ -15,23 +15,23 @@ public class DAOFactory {
     public enum  DAOTypes {
         User, ADMIN, STUDENT, PROGRAM, PAYMENT, STUDENT_PROGRAM
     }
-//
-//    public StudentDAOImpl getDAO(DAOTypes types) {
-//        switch (types){
-//            case User:
-//                return new UserDAOImpl();
-//            case ADMIN:
-//                return new AdminDAOImpl();
-//            case STUDENT:
-//                return new StudentDAOImpl();
-//            case PROGRAM:
-//                return new ProgramDAOImpl();
-//            case PAYMENT:
-//                return new PaymentDAOImpl();
-//            case STUDENT_PROGRAM:
-//                return new StudentProgramDAOImpl();
-//            default:
-//                return null;
-//        }
+
+    public StudentDAOImpl getDAO(DAOTypes types) {
+        switch (types){
+            case User:
+                return new UserDAOImpl();
+            case ADMIN:
+                return new AdminDAOImpl();
+            case STUDENT:
+                return new StudentDAOImpl();
+            case PROGRAM:
+                return new ProgramDAOImpl();
+            case PAYMENT:
+                return new PaymentDAOImpl();
+            case STUDENT_PROGRAM:
+                return new StudentProgramDAOImpl();
+            default:
+                return null;
+        }
     }
 
