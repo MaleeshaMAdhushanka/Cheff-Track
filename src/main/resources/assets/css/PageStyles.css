@@ -3,19 +3,20 @@
 /* Typography Styles */
 .label-dashboard {
     -fx-font-family: 'Open Sans Bold';
-    -fx-text-fill: #2c3e50; /* Dark text for contrast */
+    -fx-text-fill: Blue;
+    /* Dark text for contrast */
 }
 
 /* Pane Styles */
 .pane-admin-details {
     -fx-font-family: 'Open Sans';
     -fx-font-size: 18px;
-    -fx-background-color: #ecf0f1; /* Light gray for clean background */
+    -fx-background-color: black;  /* Light gray for clean background */
     -fx-background-radius: 15 0 0 15;
 }
 
 .pane-settings {
-    -fx-background-color: #ecf0f1;
+    -fx-background-color: black;
     -fx-background-radius: 15 15 15 15;
 }
 

@@ -252,10 +252,10 @@ public class StudentFormController {
             if (selectedCourse != null) {
                 openUpdateStudentForm(selectedCourse);
             } else {
-                new Alert(Alert.AlertType.WARNING, "Course ID not found").show();
+                new Alert(Alert.AlertType.WARNING, "Student ID not found").show();
             }
         } else {
-            new Alert(Alert.AlertType.WARNING, "Please enter a Course ID to search").show();
+            new Alert(Alert.AlertType.WARNING, "Please enter a Student ID to search").show();
         }
     }
 
