@@ -3,6 +3,8 @@
 Cheff Track is a robust digital system designed for The Culinary Academy in Sri Lanka. It streamlines student registration and program management, offering a modern solution to replace outdated manual processes. This system empowers administrators and admissions coordinators to handle tasks efficiently, ensuring a seamless experience for students and staff.
 
 
+![Login Page](img_1.png)
+
 ---
 
 ## **Features**
