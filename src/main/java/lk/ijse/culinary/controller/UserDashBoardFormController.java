@@ -1,5 +1,6 @@
 package lk.ijse.culinary.controller;
 
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -12,6 +13,8 @@ import lk.ijse.culinary.bo.custom.CourseBO;
 import lk.ijse.culinary.bo.custom.StudentBO;
 import lk.ijse.culinary.dto.StudentCourseDto;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class UserDashBoardFormController {
@@ -45,6 +48,10 @@ public class UserDashBoardFormController {
 
     @FXML
     private Label lblStudentsCount;
+    @FXML
+    private Label lblDate;
+    @FXML
+    private Label lblTime;
 
     @FXML
     private TableView<StudentCourseDto> tblStudentCourses;
@@ -55,6 +62,25 @@ public class UserDashBoardFormController {
     public void initialize() {
         loadStudentCourses();
         loadCounts();
+        setDateAndTime();
+    }
+
+    private void setDateAndTime() {
+        new Thread(() -> {
+            while (true) {
+                try {
+                    String date = new SimpleDateFormat("YYYY-MM-dd").format(new Date());
+                    String time = new SimpleDateFormat("hh:mm:ss a").format(new Date());
+                    Platform.runLater(() -> {
+                        lblDate.setText(date);
+                        lblTime.setText(time);
+                    });
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
 
     private void loadStudentCourses() {

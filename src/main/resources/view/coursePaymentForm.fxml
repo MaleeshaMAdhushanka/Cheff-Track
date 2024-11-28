@@ -17,7 +17,7 @@
             <Font size="30.0" />
          </font>
       </Label>
-      <MFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="606.0" layoutY="100.0" onAction="#btnAddOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-add" text="Add" />
+      <MFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="605.0" layoutY="129.0" onAction="#btnAddOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-add" text="Add" />
       <TableView fx:id="tblPayment" focusTraversable="false" layoutX="22.0" layoutY="207.0" prefHeight="433.0" prefWidth="764.0" stylesheets="@../assets/css/TableStyle.css">
          <columns>
             <TableColumn fx:id="colID" style="-fx-alignment: center;" text="PaymentID" />
@@ -30,8 +30,8 @@
             <TableColumn fx:id="colRemove" minWidth="0.0" prefWidth="64.66668701171875" style="-fx-alignment: center;" text="Remove" />
          </columns>
       </TableView>
-      <MFXTextField fx:id="txtSearch" floatMode="DISABLED" floatingText="Search" layoutX="32.0" layoutY="97.0" prefHeight="45.0" prefWidth="175.0" promptText="Search" styleClass="mfx-text-field-details" />
-      <MFXButton fx:id="btnSearch" buttonType="RAISED" layoutX="236.0" layoutY="99.0" onAction="#btnSearchOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-add" stylesheets="@../assets/css/PageStyles.css" text="Search">
+      <MFXTextField fx:id="txtSearch" floatMode="DISABLED" floatingText="Search" layoutX="33.0" layoutY="117.0" prefHeight="45.0" prefWidth="175.0" promptText="Search" styleClass="mfx-text-field-details" />
+      <MFXButton fx:id="btnSearch" buttonType="RAISED" layoutX="233.0" layoutY="119.0" onAction="#btnSearchOnAction" prefHeight="40.0" prefWidth="110.0" styleClass="mfx-button-add" stylesheets="@../assets/css/PageStyles.css" text="Search">
          <graphic>
             <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -40,7 +40,7 @@
             </ImageView>
          </graphic>
       </MFXButton>
-      <ImageView fitHeight="18.0" fitWidth="27.0" layoutX="622.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="18.0" fitWidth="27.0" layoutX="620.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/images/add.png" />
          </image>

@@ -18,6 +18,7 @@ import lk.ijse.culinary.dto.CourseDto;
 import lk.ijse.culinary.dto.PaymentDto;
 import lk.ijse.culinary.dto.StudentDto;
 import lk.ijse.culinary.tm.PaymentTm;
+import lk.ijse.culinary.util.ValidationUtil;
 import lombok.Setter;
 
 import java.time.LocalDate;
@@ -154,28 +155,54 @@ public class UpdatePaymentFormController {
     }
 
     private boolean validateFields() {
+        boolean isValid = true;
+
         if (cmbStudentEmail.getSelectionModel().getSelectedItem() == null) {
-            new Alert(Alert.AlertType.ERROR, "Please select a student email!").show();
-            cmbStudentEmail.requestFocus();
-            return false;
-        } else if (cmbCourse.getSelectionModel().getSelectedItem() == null) {
-            new Alert(Alert.AlertType.ERROR, "Please select a course!").show();
-            cmbCourse.requestFocus();
-            return false;
-        } else if (Date.getValue() == null) {
-            new Alert(Alert.AlertType.ERROR, "Please select a payment date!").show();
-            Date.requestFocus();
-            return false;
-        } else if (txtAmount.getText().trim().isEmpty()) {
-            new Alert(Alert.AlertType.ERROR, "Please enter the upfront amount!").show();
-            txtAmount.requestFocus();
-            return false;
-        } else if (txtCourseFee.getText().trim().isEmpty()) {
-            new Alert(Alert.AlertType.ERROR, "Please enter the course fee!").show();
-            txtCourseFee.requestFocus();
-            return false;
+            cmbStudentEmail.getStyleClass().add("text-field-error");
+            cmbStudentEmail.getStyleClass().remove("text-field-success");
+            isValid = false;
+        } else {
+            cmbStudentEmail.getStyleClass().remove("text-field-error");
+            cmbStudentEmail.getStyleClass().add("text-field-success");
         }
-        return true;
+
+        if (cmbCourse.getSelectionModel().getSelectedItem() == null) {
+            cmbCourse.getStyleClass().add("text-field-error");
+            cmbCourse.getStyleClass().remove("text-field-success");
+            isValid = false;
+        } else {
+            cmbCourse.getStyleClass().remove("text-field-error");
+            cmbCourse.getStyleClass().add("text-field-success");
+        }
+
+        if (Date.getValue() == null) {
+            Date.getStyleClass().add("text-field-error");
+            Date.getStyleClass().remove("text-field-success");
+            isValid = false;
+        } else {
+            Date.getStyleClass().remove("text-field-error");
+            Date.getStyleClass().add("text-field-success");
+        }
+
+        if (txtAmount.getText().trim().isEmpty() || !ValidationUtil.isNumeric(txtAmount.getText())) {
+            txtAmount.getStyleClass().add("text-field-error");
+            txtAmount.getStyleClass().remove("text-field-success");
+            isValid = false;
+        } else {
+            txtAmount.getStyleClass().remove("text-field-error");
+            txtAmount.getStyleClass().add("text-field-success");
+        }
+
+        if (txtCourseFee.getText().trim().isEmpty() || !ValidationUtil.isNumeric(txtCourseFee.getText())) {
+            txtCourseFee.getStyleClass().add("text-field-error");
+            txtCourseFee.getStyleClass().remove("text-field-success");
+            isValid = false;
+        } else {
+            txtCourseFee.getStyleClass().remove("text-field-error");
+            txtCourseFee.getStyleClass().add("text-field-success");
+        }
+
+        return isValid;
     }
 
     public void setCoursePaymentDetails(PaymentTm selectedPayment) {

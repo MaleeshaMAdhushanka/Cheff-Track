@@ -140,6 +140,8 @@ public class PaymentBOImpl implements PaymentBO {
 
     @Override
     public String generateNextId() {
+        Session session = SessionFactoryConfig.getInstance().getSession();
+        paymentDAO.setSession(session);
         return paymentDAO.generateNextId();
     }
 }

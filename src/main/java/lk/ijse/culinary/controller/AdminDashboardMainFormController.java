@@ -26,8 +26,6 @@ public class AdminDashboardMainFormController {
     @FXML
     private MFXButton btnDashboard;
 
-    @FXML
-    private MFXButton btnPayment;
 
     @FXML
     private MFXButton btnSetting;
@@ -149,7 +147,7 @@ public class AdminDashboardMainFormController {
     private void setButtonColors(Pages page){
         btnDashboard.getStyleClass().remove("mfx-button-Dashboard-active");
         btnCourse.getStyleClass().remove("mfx-button-Book-active");
-        btnPayment.getStyleClass().remove("mfx-button-BorrowBooks-active");
+
         btnSetting.getStyleClass().remove("mfx-button-Settings-active");
         btnStudent.getStyleClass().remove("mfx-button-User-active");
 
@@ -159,9 +157,6 @@ public class AdminDashboardMainFormController {
                 break;
             case COURSE:
                 btnCourse.getStyleClass().add("mfx-button-Book-active");
-                break;
-            case PAYMENTS:
-                btnPayment.getStyleClass().add("mfx-button-BorrowBooks-active");
                 break;
             case SETTINGS:
                 btnSetting.getStyleClass().add("mfx-button-Settings-active");

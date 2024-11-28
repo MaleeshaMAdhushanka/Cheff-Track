@@ -124,7 +124,7 @@ public class CoursePaymentFormController {
         ColCourseID.setCellValueFactory(new PropertyValueFactory<>("courseID"));
         ColStudentEmail.setCellValueFactory(new PropertyValueFactory<>("studentEmail"));
         colStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
-        ColStudentCourseID.setCellValueFactory(new PropertyValueFactory<>("studentCourse"));
+//        ColStudentCourseID.setCellValueFactory(new PropertyValueFactory<>("studentCourse"));
         colRemove.setCellValueFactory(new PropertyValueFactory<>("remove"));
     }
 

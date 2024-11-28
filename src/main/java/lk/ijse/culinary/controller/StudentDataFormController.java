@@ -14,6 +14,7 @@ import lk.ijse.culinary.bo.custom.CourseBO;
 import lk.ijse.culinary.bo.custom.StudentBO;
 import lk.ijse.culinary.dto.CourseDto;
 import lk.ijse.culinary.dto.StudentDto;
+import lk.ijse.culinary.util.ValidationUtil;
 import lombok.Setter;
 
 import java.util.function.Consumer;
@@ -85,7 +86,6 @@ public class StudentDataFormController {
     @FXML
     void btnAddOnAction(ActionEvent event) {
         if (validateFields()) {
-
             String studentId = lblstudentId.getText();
             String studentName = txtName.getText();
             String studentEmail = txtEmail.getText();
@@ -124,30 +124,27 @@ public class StudentDataFormController {
     }
 
     private boolean validateFields() {
-        if (!validateInputFields()) {
+        if (!ValidationUtil.isValidName(txtName.getText())) {
+            new Alert(Alert.AlertType.ERROR, "Invalid student name").show();
             return false;
         }
-
-        return true;
-    }
-
-    private boolean validateInputFields() {
-        if (txtName.getText().trim().isEmpty()) {
-            new Alert(Alert.AlertType.ERROR, "Student name is empty").show();
+        if (!ValidationUtil.isValidEmail(txtEmail.getText())) {
+            new Alert(Alert.AlertType.ERROR, "Invalid student email").show();
             return false;
-        } else if (txtEmail.getText().trim().isEmpty()) {
-            new Alert(Alert.AlertType.ERROR, "Student email is empty").show();
+        }
+        if (!ValidationUtil.isValidAddress(txtAddress.getText())) {
+            new Alert(Alert.AlertType.ERROR, "Invalid student address").show();
             return false;
-        } else if (txtAddress.getText().trim().isEmpty()) {
-            new Alert(Alert.AlertType.ERROR, "Student address is empty").show();
-            return false;
-        } else if (cmbCourse.getSelectionModel().getSelectedItem() == null) {
+        }
+        if (cmbCourse.getSelectionModel().getSelectedItem() == null) {
             new Alert(Alert.AlertType.ERROR, "No course selected").show();
             return false;
-        } else if (contact.getText().trim().isEmpty()) {
-            new Alert(Alert.AlertType.ERROR, "Student contact is empty").show();
+        }
+        if (!ValidationUtil.isValidContact(contact.getText())) {
+            new Alert(Alert.AlertType.ERROR, "Invalid student contact").show();
             return false;
-        } else if (dateofbirth.getValue() == null) {
+        }
+        if (dateofbirth.getValue() == null) {
             new Alert(Alert.AlertType.ERROR, "Student date of birth is empty").show();
             return false;
         }

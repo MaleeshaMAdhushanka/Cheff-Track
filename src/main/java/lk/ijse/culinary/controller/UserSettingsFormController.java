@@ -138,6 +138,10 @@ public class UserSettingsFormController {
             Image userImage = imagePattern.getImage();
             URI uri = new URI(userImage.getUrl());
 
+            if (!"file".equals(uri.getScheme())) {
+                throw new IllegalArgumentException("URI is not hierarchical");
+            }
+
             File file = new File(uri);
             String sourceLocation = file.getAbsolutePath();
 
@@ -149,7 +153,7 @@ public class UserSettingsFormController {
                 Files.createDirectories(directoryPath);
             }
 
-            if (!(sourceLocation.equals("assets/images/addUserImage.png"))) {
+            if (!sourceLocation.equals("assets/images/addUserImage.png")) {
                 Path sourcePath = file.toPath();
                 Path destinationPath = Paths.get(directoryPath.toString(), file.getName());
                 Files.copy(sourcePath, destinationPath, StandardCopyOption.REPLACE_EXISTING);
@@ -169,49 +173,47 @@ public class UserSettingsFormController {
 
     private boolean validateRegister() {
 
-        boolean isNameValid = txtName.getText().matches("^[\\p{L} '-]+$");
-        if (!isNameValid) {
-            txtName.requestFocus();
-            txtName.getStyleClass().add("mfx-text-field-error");
-            return false;
+        boolean isValid = true;
+
+        if (!txtName.getText().matches("^[\\p{L} '-]+$")) {
+            txtName.getStyleClass().add("text-field-error");
+            txtName.getStyleClass().remove("text-field-success");
+            isValid = false;
+        } else {
+            txtName.getStyleClass().remove("text-field-error");
+            txtName.getStyleClass().add("text-field-success");
         }
 
-        txtName.getStyleClass().remove("mfx-text-field-error");
-
-
-        boolean isAddressValid = txtAddress.getText().matches("^[a-zA-Z0-9,._#()/:;]+$");
-
-        if (!isAddressValid) {
-            txtAddress.requestFocus();
-            txtAddress.getStyleClass().add("mfx-text-field-error");
-            return false;
+        if (!txtAddress.getText().matches("^[a-zA-Z0-9,._#()/:;]+$")) {
+            txtAddress.getStyleClass().add("text-field-error");
+            txtAddress.getStyleClass().remove("text-field-success");
+            isValid = false;
+        } else {
+            txtAddress.getStyleClass().remove("text-field-error");
+            txtAddress.getStyleClass().add("text-field-success");
         }
 
-        txtAddress.getStyleClass().remove("mfx-text-field-error");
-
-
-        boolean isUserNameValid = txtEmail.getText().matches("^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$");
-        if (!isUserNameValid) {
-            txtEmail.requestFocus();
-            txtEmail.getStyleClass().add("mfx-text-field-error");
-            return false;
+        if (!txtEmail.getText().matches("^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$")) {
+            txtEmail.getStyleClass().add("text-field-error");
+            txtEmail.getStyleClass().remove("text-field-success");
+            isValid = false;
+        } else {
+            txtEmail.getStyleClass().remove("text-field-error");
+            txtEmail.getStyleClass().add("text-field-success");
         }
 
-        txtEmail.getStyleClass().remove("mfx-text-field-error");
-
-        boolean isPasswordValid = txtPassword.getText().matches("^[a-zA-Z0-9@#]{3,}$");
-
-        if (!isPasswordValid) {
-            txtPassword.requestFocus();
-            txtPassword.getStyleClass().add("mfx-text-field-error");
-            return false;
+        if (!txtPassword.getText().matches("^[a-zA-Z0-9@#]{3,}$")) {
+            txtPassword.getStyleClass().add("text-field-error");
+            txtPassword.getStyleClass().remove("text-field-success");
+            isValid = false;
+        } else {
+            txtPassword.getStyleClass().remove("text-field-error");
+            txtPassword.getStyleClass().add("text-field-success");
         }
 
-        txtPassword.getStyleClass().remove("mfx-text-field-error");
-
-        return true;
+        return isValid;
     }
-        @FXML
+    @FXML
     void circleImgOnAction(MouseEvent event) {
         FileChooser fileChooser = new FileChooser();
         configureFileChooser(fileChooser);
@@ -228,11 +230,10 @@ public class UserSettingsFormController {
     private void configureFileChooser(FileChooser fileChooser) {
         fileChooser.setTitle("Select Image File");
         fileChooser.getExtensionFilters().addAll(
-                new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif", "*.jpeg")
+                new FileChooser.ExtensionFilter("Image Files", ".png", ".jpg", ".gif", ".jpeg")
         );
     }
 
 
 
 }
-

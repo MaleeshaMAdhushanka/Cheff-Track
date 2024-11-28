@@ -43,8 +43,9 @@ public class PaymentDAOImpl implements PaymentDAO {
 
     @Override
     public String generateNextId() {
-        String hql = "SELECT p.payment_ID FROM Payment p ORDER BY p.payment_ID DESC";
-        Query<String> query = session.createQuery(hql, String.class);
+        Query<String> query = session.createQuery("SELECT p.id FROM Payment p ORDER BY p.id DESC", String.class);
+//        String hql = "SELECT p.payment_ID FROM Payment p ORDER BY p.payment_ID DESC";
+//        Query<String> query = session.createQuery(hql, String.class);
         query.setMaxResults(1);
         String lastId = query.uniqueResult();
         if (lastId != null) {

@@ -2,7 +2,9 @@ package lk.ijse.culinary.dao.custom.impl;
 
 import lk.ijse.culinary.dao.custom.CourseDAO;
 import lk.ijse.culinary.entity.Course;
+import lk.ijse.culinary.util.SessionFactoryConfig;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import java.util.List;
@@ -45,16 +47,30 @@ public class CourseDAOImpl implements CourseDAO {
 
     @Override
     public String generateNextId() {
-        String hql = "SELECT id FROM Course ORDER BY id DESC";
-        Query<String> query = session.createQuery(hql, String.class);
-        String lastId = query.setMaxResults(1).uniqueResult();
-        if (lastId != null) {
-            int nextId = Integer.parseInt(lastId.substring(1)) + 1;
-            return "C" + String.format("%03d", nextId);
-        } else {
-            return "C001";
+        try {
+            session = SessionFactoryConfig.getInstance().getSession();
+            Transaction transaction = session.beginTransaction();
+
+            String hql = "SELECT c.id FROM Course c ORDER BY c.id DESC";
+            String lastId = session.createQuery(hql, String.class).setMaxResults(1).uniqueResult();
+
+            transaction.commit();
+            session.close();
+
+            if (lastId != null) {
+                int nextId = Integer.parseInt(lastId.replace("CA", "")) + 1;
+                return String.format("CA%04d", nextId);
+            } else {
+                return "CA1001";
+            }
+        } catch (Exception e) {
+            if (session != null) {
+                session.close();
+            }
+            throw new RuntimeException("Failed to generate next course ID", e);
         }
     }
+
 
     @Override
     public List<String> getIds() {

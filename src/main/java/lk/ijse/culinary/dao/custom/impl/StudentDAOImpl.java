@@ -118,16 +118,18 @@ public class StudentDAOImpl implements StudentDAO {
 
     @Override
     public int getStudentCount() {
-        String hql = "SELECT COUNT(*) FROM Student";
-        Query<Long> query = session.createQuery(hql, Long.class);
-        return query.uniqueResult().intValue();
+//        String hql = "SELECT COUNT(*) FROM Student";
+//        Query<Long> query = session.createQuery(hql, Long.class);
+//        return query.uniqueResult().intValue();
+        return session.createQuery("SELECT COUNT(*) FROM Student", Long.class).uniqueResult().intValue();
     }
 
     @Override
     public int getRegisteredStudentCount() {
-        String hql = "SELECT COUNT(*) FROM Student WHERE registered = true";
-        Query<Long> query = session.createQuery(hql, Long.class);
-        return query.uniqueResult().intValue();
+//        String hql = "SELECT COUNT(*) FROM Student WHERE id = true";
+//        Query<Long> query = session.createQuery(hql, Long.class);
+//        return query.uniqueResult().intValue();
+        return session.createQuery("SELECT COUNT(*) FROM Student WHERE id = true", Long.class).uniqueResult().intValue();
     }
 
     @Override
