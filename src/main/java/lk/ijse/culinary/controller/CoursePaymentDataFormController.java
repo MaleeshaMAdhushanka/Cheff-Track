@@ -104,9 +104,6 @@ public class CoursePaymentDataFormController {
         loadAllCourses();
         loadAllStudents();
         getAllStudentCourses();
-        // searchStudent();
-        // searchPayment();
-        //setDate();
         try {
             String newPaymentId = paymentBO.generateNextId();
             lblPayID.setText(newPaymentId);
@@ -236,13 +233,6 @@ public class CoursePaymentDataFormController {
         // Handle the update action
     }
 
-//    public void setCoursePaymentDetails(PaymentTm selectedPayment) {
-//        lblPayID.setText(selectedPayment.getPaymentID());
-//        cmbStudentEmail.getSelectionModel().select(selectedPayment.getStudentEmail());
-//        txtName.setText(selectedPayment.getStudentName());
-//        cmbCourse.getSelectionModel().select(selectedPayment.getCourseID());
-//        txtCourseFee.setText(selectedPayment.getCourseFee() + "");
-//    }
 
     @FXML
     void btnPayOnAction(ActionEvent event) {
@@ -278,18 +268,12 @@ public class CoursePaymentDataFormController {
             new Alert(Alert.AlertType.ERROR, "Amount field cannot be empty!").show();
             return false;
         }
-//        if (!ValidationUtil.isDecimal(String.valueOf(txtAmount))) {
-//            new Alert(Alert.AlertType.ERROR, "Amount must be a number!").show();
-//            return false;
-//        }
+
         if (!ValidationUtil.isNotEmpty(String.valueOf(txtCourseFee))) {
             new Alert(Alert.AlertType.ERROR, "Course Fee field cannot be empty!").show();
             return false;
         }
-//        if (!ValidationUtil.isNumeric(String.valueOf(txtCourseFee))) {
-//            new Alert(Alert.AlertType.ERROR, "Course Fee must be a number!").show();
-//            return false;
-//        }
+
         if (!ValidationUtil.isNotEmpty(String.valueOf(txtName))) {
             new Alert(Alert.AlertType.ERROR, "Name field cannot be empty!").show();
             return false;

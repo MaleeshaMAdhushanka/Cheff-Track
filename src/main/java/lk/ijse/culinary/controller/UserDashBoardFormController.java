@@ -4,10 +4,14 @@ import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import lk.ijse.culinary.bo.BOFactory;
 import lk.ijse.culinary.bo.custom.CourseBO;
 import lk.ijse.culinary.bo.custom.StudentBO;
@@ -48,10 +52,7 @@ public class UserDashBoardFormController {
 
     @FXML
     private Label lblStudentsCount;
-    @FXML
-    private Label lblDate;
-    @FXML
-    private Label lblTime;
+
 
     @FXML
     private TableView<StudentCourseDto> tblStudentCourses;
@@ -62,26 +63,9 @@ public class UserDashBoardFormController {
     public void initialize() {
         loadStudentCourses();
         loadCounts();
-        setDateAndTime();
+
     }
 
-    private void setDateAndTime() {
-        new Thread(() -> {
-            while (true) {
-                try {
-                    String date = new SimpleDateFormat("YYYY-MM-dd").format(new Date());
-                    String time = new SimpleDateFormat("hh:mm:ss a").format(new Date());
-                    Platform.runLater(() -> {
-                        lblDate.setText(date);
-                        lblTime.setText(time);
-                    });
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
-    }
 
     private void loadStudentCourses() {
         try {
@@ -106,4 +90,5 @@ public class UserDashBoardFormController {
             e.printStackTrace();
         }
     }
+
 }

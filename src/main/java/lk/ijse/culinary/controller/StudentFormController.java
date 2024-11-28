@@ -234,7 +234,6 @@ public class StudentFormController {
             boolean isDeleted = new StudentBOImpl().deleteStudent(selectedStudent.getId());
             if (isDeleted) {
                 studentList.removeIf(student -> student.getId().equals(selectedStudent.getId()));
-//                loadStudentsTable();
                 refreshTable();
                 new Alert(Alert.AlertType.CONFIRMATION, "Student deleted successfully").show();
             } else {

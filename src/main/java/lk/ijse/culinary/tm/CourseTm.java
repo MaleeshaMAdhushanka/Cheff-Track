@@ -14,6 +14,6 @@ public class CourseTm {
     private String courseName;
     private String courseDuration;
     private double courseFee;
-private MFXButton remove;
+    private MFXButton remove;
 
 }

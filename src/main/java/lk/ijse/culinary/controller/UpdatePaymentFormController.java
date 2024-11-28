@@ -104,7 +104,6 @@ public class UpdatePaymentFormController {
 
     @FXML
     void cmbStudentEmailOnAction(ActionEvent event) {
-        // Handle the action event for cmbStudentEmail here
     }
 
     private void closeTheWindow() {

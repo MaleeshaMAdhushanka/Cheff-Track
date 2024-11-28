@@ -65,26 +65,25 @@ public class AdminDashBoardFormController {
     public void initialize() {
         loadStudentCourses();
         loadCounts();
-        setDateAndTime();
     }
 
-    private void setDateAndTime() {
-        new Thread(() -> {
-            while (true) {
-                try {
-                    String date = new SimpleDateFormat("YYYY-MM-dd").format(new Date());
-                    String time = new SimpleDateFormat("hh:mm:ss a").format(new Date());
-                    Platform.runLater(() -> {
-                        lblDate.setText(date);
-                        lblTime.setText(time);
-                    });
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
-    }
+//    private void setDateAndTime() {
+//        new Thread(() -> {
+//            while (true) {
+//                try {
+//                    String date = new SimpleDateFormat("YYYY-MM-dd").format(new Date());
+//                    String time = new SimpleDateFormat("hh:mm:ss a").format(new Date());
+//                    Platform.runLater(() -> {
+//                        lblDate.setText(date);
+//                        lblTime.setText(time);
+//                    });
+//                    Thread.sleep(1000);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }).start();
+//    }
 
     private void loadStudentCourses() {
         try {

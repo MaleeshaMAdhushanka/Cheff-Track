@@ -36,6 +36,11 @@ public class UserDto {
         this.address = address;
         this.password = password;
     }
+
+    public UserDto(String text, String encryptedPassword, String imgUrl) {
+
+    }
+
     public String getEmail() {
         return email;
     }

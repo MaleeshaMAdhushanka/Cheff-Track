@@ -134,7 +134,7 @@ public class StudentDAOImpl implements StudentDAO {
 
     @Override
     public List<StudentCourseDto> getAllStudentCourses() {
-        String hql = "SELECT new lk.ijse.culinary.dto.StudentCourseDto(s.id, s.name, c.courseName, c.duration, sc.registeredDate, sc.restPayAmount) " +
+        String hql = "SELECT new lk.ijse.culinary.dto.StudentCourseDto(s.id, s.name, c.courseName, c.courseDuration, sc.registrationDate, sc.restPayAmount) " +
                 "FROM StudentCourse sc JOIN sc.student s JOIN sc.course c";
         Query<StudentCourseDto> query = session.createQuery(hql, StudentCourseDto.class);
         return query.list();
